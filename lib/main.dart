@@ -1,12 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_mapa/pages/acceso_gps_page.dart';
-import 'package:flutter_mapa/pages/loading_page.dart';
-import 'package:flutter_mapa/pages/mapa_page.dart';
+import 'package:flutter_mapa/ui/pages/acceso_gps_page.dart';
+import 'package:flutter_mapa/ui/pages/loading_page.dart';
+import 'package:flutter_mapa/ui/pages/mapa_page.dart';
+import 'package:get/get.dart';
 
-import 'bloc/mi_ubicacion/mi_ubicacion_bloc.dart';
+import 'ui/controllers/ubicacion_controller.dart';
+
 
 void main() {
+
+  Get.put(UbicacionController());
+
   runApp(const MainApp());
 }
 
@@ -15,19 +19,14 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  MultiBlocProvider(
-      providers: [
-        BlocProvider(create: (_) => MiUbicacionBloc()),
-      ],
-      child: MaterialApp(
-        debugShowCheckedModeBanner: false,
-        home: LoadingPage(),
-        routes: {
-          'loading'   : (_) =>  LoadingPage(),
-          'acceso_gps': (_) =>  AccesoGpsPage(),
-          'mapa'      : (_) =>  MapaPage(),
-        },
-      ),
+    return  MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: LoadingPage(),
+      routes: {
+        'loading'   : (_) =>  LoadingPage(),
+        'acceso_gps': (_) =>  AccesoGpsPage(),
+        'mapa'      : (_) =>  MapaPage(),
+      },
     );
   }
 }
