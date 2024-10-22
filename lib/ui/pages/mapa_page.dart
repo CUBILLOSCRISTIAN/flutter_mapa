@@ -1,14 +1,13 @@
-import 'dart:convert';
+
 
 import 'package:flutter/material.dart';
 import 'package:flutter_map/flutter_map.dart';
 import 'package:flutter_map_location_marker/flutter_map_location_marker.dart';
-import 'package:flutter_mapa/ui/helpers/api.dart';
-import 'package:http/http.dart' as http;
+import 'package:flutter_mapa/config/controllers/graph_controller.dart';
 import 'package:get/get.dart';
 import 'package:latlong2/latlong.dart';
 
-import '../controllers/ubicacion_controller.dart';
+import '../../config/controllers/ubicacion_controller.dart';
 
 class MapaPage extends StatefulWidget {
   const MapaPage({super.key});
@@ -22,35 +21,11 @@ class _MapaPageState extends State<MapaPage> {
 
   List<LatLng> points = [];
 
-  //funtion para consumir api
-
-  getCoordinates() async {
-    try {
-      var response = await http.get(getRouterURL('', ''));
-      print('Response: $response');
-
-      setState(() {
-        if (response.statusCode == 200) {
-          var data = jsonDecode(response.body);
-          print(data);
-
-          listOfPoints = data['decoded_points'];
-          print('List of points: $listOfPoints');
-          points =
-              listOfPoints.map((point) => LatLng(point[1], point[0])).toList();
-            print('Points: $points');
-        } else {
-          print('Error!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!');
-        }
-      });
-    } catch (e) {
-      print(e);
-    }
-  }
 
   @override
   Widget build(BuildContext context) {
-    UbicacionController ubicacionController = Get.find();
+    LocationController ubicacionController = Get.find();
+    GraphController graphController = Get.find();
 
     return Scaffold(
       body: Center(
@@ -58,14 +33,15 @@ class _MapaPageState extends State<MapaPage> {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          getCoordinates();
-        },
+          graphController.findShortestPath().then((listOfPoints) {
+            print(listOfPoints);
+          });  },
         child: const Icon(Icons.route),
       ),
     );
   }
 
-  Widget _crearMapa(UbicacionController ubicacionController) {
+  Widget _crearMapa(LocationController ubicacionController) {
     if (!ubicacionController.existeUbicacion.value) {
       return const Text('Ubicando...');
     }
@@ -83,7 +59,7 @@ class _MapaPageState extends State<MapaPage> {
       options: options,
       children: [
         TileLayer(
-          urlTemplate: 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+          urlTemplate: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
           userAgentPackageName: 'com.example.app',
           maxZoom: 19,
         ),
