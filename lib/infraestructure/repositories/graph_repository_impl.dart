@@ -1,7 +1,10 @@
-import 'package:flutter_mapa/domain/models/point_model.dart';
+
+import 'package:flutter_mapa/domain/models/graph.dart';
+import 'package:flutter_mapa/domain/models/node.dart';
+
 import 'package:flutter_mapa/domain/repositories/i_graph_repository.dart';
 import 'package:flutter_mapa/infraestructure/local/i_local_graph.dart';
-import 'package:flutter_mapa/infraestructure/models/graph.dart';
+import 'package:latlong2/latlong.dart';
 
 class GraphRepositoryImpl implements IGraphRepository {
   final ILocalRoute _localGraph;
@@ -10,22 +13,20 @@ class GraphRepositoryImpl implements IGraphRepository {
 
   @override
   Future<void> createGraph() async {
-    final geoJson = await _localGraph.loadGeoJson();
-    final graph = Graph();
+    final geoJsonData = await _localGraph.loadGeoJson();
 
-    for (var feature in geoJson.features) {
-      for (var i = 0; i < feature.coordinates.length - 1; i++) {
-        final start = feature.coordinates[i];
-        final end = feature.coordinates[i + 1];
-        graph.addEdge(start, end, 1); // Puedes ajustar el peso según tus necesidades
-      }
-    }
-
-    return _localGraph.saveGraph(graph);
+    Graph graph = await _localGraph.createGraph(geoJsonData);
+    _localGraph.saveGraph(graph);
   }
 
   @override
-  List<PointModel> getShortestPath(PointModel start, PointModel end) {
-    return _localGraph.getShortestPath( start, end);
+  List<Node> getShortestPath(LatLng start, LatLng end) {
+    return _localGraph.getShortestPath(start, end);
   }
+
+  @override
+  Graph getGraph() {
+    return _localGraph.loadGraph();
+  }
+
 }

@@ -1,11 +1,10 @@
-
-
 import 'package:flutter/material.dart';
 import 'package:flutter_map/flutter_map.dart';
 import 'package:flutter_map_location_marker/flutter_map_location_marker.dart';
 import 'package:flutter_mapa/config/controllers/graph_controller.dart';
 import 'package:get/get.dart';
 import 'package:latlong2/latlong.dart';
+import 'package:flutter_mapa/domain/models/node.dart' as domain;
 
 import '../../config/controllers/ubicacion_controller.dart';
 
@@ -21,7 +20,6 @@ class _MapaPageState extends State<MapaPage> {
 
   List<LatLng> points = [];
 
-
   @override
   Widget build(BuildContext context) {
     LocationController ubicacionController = Get.find();
@@ -33,15 +31,23 @@ class _MapaPageState extends State<MapaPage> {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          graphController.findShortestPath().then((listOfPoints) {
-            print(listOfPoints);
-          });  },
+          List<domain.Node> listPath = graphController.findShortestPath();
+          listPath.forEach((element) {
+            listOfPoints.add(LatLng(element.coordinates.latitude, element.coordinates.longitude));
+          });
+          debugPrint('Shortest path: ${graphController.findShortestPath()}');
+          setState(() {
+            points = List<LatLng>.from(listOfPoints);
+          });
+        },
         child: const Icon(Icons.route),
       ),
     );
   }
 
-  Widget _crearMapa(LocationController ubicacionController) {
+  Widget _crearMapa(
+    LocationController ubicacionController,
+  ) {
     if (!ubicacionController.existeUbicacion.value) {
       return const Text('Ubicando...');
     }

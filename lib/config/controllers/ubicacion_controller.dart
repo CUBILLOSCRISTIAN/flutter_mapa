@@ -5,7 +5,7 @@ import 'package:get/get.dart';
 import 'package:latlong2/latlong.dart';
 
 
-class UbicacionController extends GetxController {
+class LocationController extends GetxController {
   var siguiendo = true.obs;
   var existeUbicacion = false.obs;
   var ubicacion = const LatLng(0, 0).obs;

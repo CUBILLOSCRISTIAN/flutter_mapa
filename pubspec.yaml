@@ -7,23 +7,26 @@ environment:
   sdk: ^3.5.1
 
 dependencies:
+  animate_do: ^3.3.4
+  dio: ^5.6.0
   flutter:
     sdk: flutter
-  geolocator: ^13.0.1
-  dio: ^5.6.0
-  permission_handler: ^11.3.1
-  animate_do: ^3.3.4
-  get: ^4.6.6
   flutter_map: ^7.0.2
   flutter_map_location_marker: ^9.1.1
-  latlong2: ^0.9.1
   flutter_svg: ^2.0.10+1
+  geolocator: ^13.0.1
+  get: ^4.6.6
+  graphs: ^2.3.2
   http: ^1.2.2
+  latlong2: ^0.9.1
+  permission_handler: ^11.3.1
+  collection: ^1.18.0
+  
 
 dev_dependencies:
+  flutter_lints: ^4.0.0
   flutter_test:
     sdk: flutter
-  flutter_lints: ^4.0.0
 
 flutter:
   uses-material-design: true

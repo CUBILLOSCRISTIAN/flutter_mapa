@@ -1,10 +1,13 @@
-import 'package:flutter_mapa/domain/models/point_model.dart';
-import 'package:flutter_mapa/infraestructure/models/geojson.dart';
-import 'package:flutter_mapa/infraestructure/models/graph.dart';
+import 'package:flutter_mapa/domain/models/geojson.dart';
+import 'package:flutter_mapa/domain/models/graph.dart';
+import 'package:flutter_mapa/domain/models/node.dart';
+import 'package:latlong2/latlong.dart';
 
 abstract class ILocalRoute {
   Future<GeoJson> loadGeoJson();
   Future<void> saveGraph(Graph graph);
   Graph loadGraph();
-  List<PointModel> getShortestPath(PointModel start, PointModel end);
+  List<Node> getShortestPath(LatLng start, LatLng end);
+
+  Future<Graph> createGraph(GeoJson geoJsonData);
 }
