@@ -1,8 +1,6 @@
-import 'dart:convert';
 import 'dart:math';
 
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:flutter_mapa/domain/models/edge.dart';
 import 'package:flutter_mapa/domain/models/geojson.dart';
 import 'package:flutter_mapa/domain/models/graph.dart';
@@ -20,14 +18,6 @@ class LocalGraph implements ILocalRoute {
     }
 
     return aStar(start, end, _graph!.nodes);
-  }
-
-  @override
-  Future<GeoJson> loadGeoJson() async {
-    final jsonString =
-        await rootBundle.loadString('assets/map_geojson/roads.geojson');
-    final jsonMap = jsonDecode(jsonString);
-    return GeoJson.fromJson(jsonMap);
   }
 
   @override

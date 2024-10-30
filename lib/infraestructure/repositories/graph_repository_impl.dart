@@ -1,9 +1,11 @@
 
+import 'package:flutter_mapa/domain/models/geojson.dart';
 import 'package:flutter_mapa/domain/models/graph.dart';
 import 'package:flutter_mapa/domain/models/node.dart';
 
 import 'package:flutter_mapa/domain/repositories/i_graph_repository.dart';
 import 'package:flutter_mapa/infraestructure/local/i_local_graph.dart';
+import 'package:flutter_mapa/infraestructure/utils/load_geojson.dart';
 import 'package:latlong2/latlong.dart';
 
 class GraphRepositoryImpl implements IGraphRepository {
@@ -13,7 +15,9 @@ class GraphRepositoryImpl implements IGraphRepository {
 
   @override
   Future<void> createGraph() async {
-    final geoJsonData = await _localGraph.loadGeoJson();
+    // final geoJsonData = await _localGraph.loadGeoJson();
+
+    final geoJsonData = await loadGeoJsonFromPath<GeoJson>('assets/map_geojson/roads.geojson', GeoJson.fromJson);
 
     Graph graph = await _localGraph.createGraph(geoJsonData);
     _localGraph.saveGraph(graph);

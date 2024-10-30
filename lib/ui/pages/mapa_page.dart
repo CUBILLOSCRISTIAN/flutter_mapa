@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_map/flutter_map.dart';
 import 'package:flutter_map_location_marker/flutter_map_location_marker.dart';
 import 'package:flutter_mapa/config/controllers/graph_controller.dart';
+import 'package:flutter_mapa/ui/delegates/search_delegate.dart';
 import 'package:get/get.dart';
 import 'package:latlong2/latlong.dart';
 import 'package:flutter_mapa/domain/models/node.dart' as domain;
@@ -31,17 +32,19 @@ class _MapaPageState extends State<MapaPage> {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          List<domain.Node> listPath = graphController.findShortestPath();
-          listPath.forEach((element) {
-            listOfPoints.add(LatLng(element.coordinates.latitude, element.coordinates.longitude));
-          });
-          debugPrint('Shortest path: ${graphController.findShortestPath()}');
-          setState(() {
-            points = List<LatLng>.from(listOfPoints);
-          });
+          // List<domain.Node> listPath = graphController.findShortestPath();
+          // listPath.forEach((element) {
+          //   listOfPoints.add(LatLng(element.coordinates.latitude, element.coordinates.longitude));
+          // });
+          // debugPrint('Shortest path: ${graphController.findShortestPath()}');
+          // setState(() {
+          //   points = List<LatLng>.from(listOfPoints);
+          // });
+          showSearch(context: context, delegate: SearchDelegateClass());
         },
-        child: const Icon(Icons.route),
+        child: const Icon(Icons.search_outlined),
       ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.endTop,
     );
   }
 

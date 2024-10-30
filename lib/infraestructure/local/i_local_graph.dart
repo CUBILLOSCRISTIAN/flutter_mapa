@@ -4,10 +4,8 @@ import 'package:flutter_mapa/domain/models/node.dart';
 import 'package:latlong2/latlong.dart';
 
 abstract class ILocalRoute {
-  Future<GeoJson> loadGeoJson();
   Future<void> saveGraph(Graph graph);
   Graph loadGraph();
   List<Node> getShortestPath(LatLng start, LatLng end);
-
   Future<Graph> createGraph(GeoJson geoJsonData);
 }

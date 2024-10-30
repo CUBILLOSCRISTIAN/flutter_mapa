@@ -22,7 +22,8 @@ class GraphController extends GetxController {
   }
 
   List<domain.Node> findShortestPath() {
-    const start = LatLng(11.0197169, -74.8475795);
+    const start = LatLng(
+                        11.0194067,-74.849615);
     const end = LatLng(11.0196014, -74.8488317);
     return _graphUseCase.getShortestPath(start, end);
   }
