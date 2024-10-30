@@ -4,24 +4,24 @@
 
 import 'dart:convert';
 
-POI poiFromJson(String str) => POI.fromJson(json.decode(str));
+GeoJsonPOIs poiFromJson(String str) => GeoJsonPOIs.fromJson(json.decode(str));
 
-String poiToJson(POI data) => json.encode(data.toJson());
+String poiToJson(GeoJsonPOIs data) => json.encode(data.toJson());
 
-class POI {
+class GeoJsonPOIs {
     final String? type;
     final String? name;
     final Crs? crs;
     final List<Feature>? features;
 
-    POI({
+    GeoJsonPOIs({
         this.type,
         this.name,
         this.crs,
         this.features,
     });
 
-    factory POI.fromJson(Map<String, dynamic> json) => POI(
+    factory GeoJsonPOIs.fromJson(Map<String, dynamic> json) => GeoJsonPOIs(
         type: json["type"],
         name: json["name"],
         crs: json["crs"] == null ? null : Crs.fromJson(json["crs"]),

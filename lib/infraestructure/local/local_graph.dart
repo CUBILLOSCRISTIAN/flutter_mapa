@@ -1,10 +1,10 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_mapa/domain/models/edge.dart';
-import 'package:flutter_mapa/domain/models/geojson.dart';
-import 'package:flutter_mapa/domain/models/graph.dart';
-import 'package:flutter_mapa/domain/models/node.dart';
+import 'package:flutter_mapa/domain/models/Graph/edge.dart';
+import 'package:flutter_mapa/infraestructure/models/geojson_roads.dart';
+import 'package:flutter_mapa/domain/models/Graph/graph.dart';
+import 'package:flutter_mapa/domain/models/Graph/node.dart';
 import 'package:flutter_mapa/infraestructure/local/i_local_graph.dart';
 import 'package:latlong2/latlong.dart';
 
@@ -34,7 +34,7 @@ class LocalGraph implements ILocalRoute {
   }
 
   @override
-  Future<Graph> createGraph(GeoJson geoJsonData) async {
+  Future<Graph> createGraph(GeoJsonRoads geoJsonData) async {
     final Map<String, Node> nodes = {};
 
     if (geoJsonData.features != null) {

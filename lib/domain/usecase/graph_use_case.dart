@@ -1,5 +1,5 @@
-import 'package:flutter_mapa/domain/models/graph.dart';
-import 'package:flutter_mapa/domain/models/node.dart';
+import 'package:flutter_mapa/domain/models/Graph/graph.dart';
+import 'package:flutter_mapa/domain/models/Graph/node.dart';
 import 'package:flutter_mapa/domain/repositories/i_graph_repository.dart';
 import 'package:latlong2/latlong.dart';
 

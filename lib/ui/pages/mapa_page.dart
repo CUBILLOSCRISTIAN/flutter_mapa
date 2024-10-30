@@ -5,7 +5,7 @@ import 'package:flutter_mapa/config/controllers/graph_controller.dart';
 import 'package:flutter_mapa/ui/delegates/search_delegate.dart';
 import 'package:get/get.dart';
 import 'package:latlong2/latlong.dart';
-import 'package:flutter_mapa/domain/models/node.dart' as domain;
+import 'package:flutter_mapa/domain/models/Graph/node.dart' as domain;
 
 import '../../config/controllers/ubicacion_controller.dart';
 

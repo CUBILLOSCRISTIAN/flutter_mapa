@@ -1,5 +1,5 @@
-import 'package:flutter_mapa/domain/models/graph.dart';
-import 'package:flutter_mapa/domain/models/node.dart' as domain;
+import 'package:flutter_mapa/domain/models/Graph/graph.dart';
+import 'package:flutter_mapa/domain/models/Graph/node.dart' as domain;
 import 'package:flutter_mapa/domain/usecase/graph_use_case.dart';
 import 'package:get/get.dart';
 import 'package:latlong2/latlong.dart';

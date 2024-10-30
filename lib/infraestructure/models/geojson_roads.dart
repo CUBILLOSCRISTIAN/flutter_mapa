@@ -1,61 +1,66 @@
 // To parse this JSON data, do
 //
-//     final geoJsonInfraestructure = geoJsonInfraestructureFromJson(jsonString);
+//     final geoJson = geoJsonFromJson(jsonString);
 
+import 'dart:convert';
 
-class GeoJsonInfraestructure {
-    final String type;
-    final String name;
-    final Crs crs;
-    final List<Feature> features;
+GeoJsonRoads geoJsonFromJson(String str) => GeoJsonRoads.fromJson(json.decode(str));
 
-    GeoJsonInfraestructure({
-        required this.type,
-        required this.name,
-        required this.crs,
-        required this.features,
+String geoJsonToJson(GeoJsonRoads data) => json.encode(data.toJson());
+
+class GeoJsonRoads {
+    final String? type;
+    final String? name;
+    final Crs? crs;
+    final List<Feature>? features;
+
+    GeoJsonRoads({
+        this.type,
+        this.name,
+        this.crs,
+        this.features,
     });
 
-    factory GeoJsonInfraestructure.fromJson(Map<String, dynamic> json) => GeoJsonInfraestructure(
+    factory GeoJsonRoads.fromJson(Map<String, dynamic> json) => GeoJsonRoads(
         type: json["type"],
         name: json["name"],
-        crs: Crs.fromJson(json["crs"]),
-        features: List<Feature>.from(json["features"].map((x) => Feature.fromJson(x))),
+        crs: json["crs"] == null ? null : Crs.fromJson(json["crs"]),
+        features: json["features"] == null ? [] : List<Feature>.from(json["features"]!.map((x) => Feature.fromJson(x))),
     );
 
     Map<String, dynamic> toJson() => {
         "type": type,
         "name": name,
-        "crs": crs.toJson(),
-        "features": List<dynamic>.from(features.map((x) => x.toJson())),
+        "crs": crs?.toJson(),
+        "features": features == null ? [] : List<dynamic>.from(features!.map((x) => x.toJson())),
     };
 }
 
 class Crs {
-    final String type;
-    final CrsProperties properties;
+    final String? type;
+    final CrsProperties? properties;
 
     Crs({
-        required this.type,
-        required this.properties,
+        this.type,
+        this.properties,
     });
 
     factory Crs.fromJson(Map<String, dynamic> json) => Crs(
         type: json["type"],
-        properties: CrsProperties.fromJson(json["properties"]),
+        properties: json["properties"] == null ? null : CrsProperties.fromJson(json["properties"]),
     );
 
     Map<String, dynamic> toJson() => {
         "type": type,
-        "properties": properties.toJson(),
+        "properties": properties?.toJson(),
     };
 }
 
 class CrsProperties {
-    final String name;
+    final String? name;
 
     CrsProperties({
-        required this.name,
+        this.name,
     });
 
     factory CrsProperties.fromJson(Map<String, dynamic> json) => CrsProperties(
@@ -68,46 +73,46 @@ class CrsProperties {
 }
 
 class Feature {
-    final FeatureType type;
-    final FeatureProperties properties;
-    final Geometry geometry;
+    final FeatureType? type;
+    final FeatureProperties? properties;
+    final Geometry? geometry;
 
     Feature({
-        required this.type,
-        required this.properties,
-        required this.geometry,
+        this.type,
+        this.properties,
+        this.geometry,
     });
 
     factory Feature.fromJson(Map<String, dynamic> json) => Feature(
         type: featureTypeValues.map[json["type"]]!,
-        properties: FeatureProperties.fromJson(json["properties"]),
-        geometry: Geometry.fromJson(json["geometry"]),
+        properties: json["properties"] == null ? null : FeatureProperties.fromJson(json["properties"]),
+        geometry: json["geometry"] == null ? null : Geometry.fromJson(json["geometry"]),
     );
 
     Map<String, dynamic> toJson() => {
         "type": featureTypeValues.reverse[type],
-        "properties": properties.toJson(),
-        "geometry": geometry.toJson(),
+        "properties": properties?.toJson(),
+        "geometry": geometry?.toJson(),
     };
 }
 
 class Geometry {
-    final GeometryType type;
-    final List<List<double>> coordinates;
+    final GeometryType? type;
+    final List<List<double>>? coordinates;
 
     Geometry({
-        required this.type,
-        required this.coordinates,
+        this.type,
+        this.coordinates,
     });
 
     factory Geometry.fromJson(Map<String, dynamic> json) => Geometry(
         type: geometryTypeValues.map[json["type"]]!,
-        coordinates: List<List<double>>.from(json["coordinates"].map((x) => List<double>.from(x.map((x) => x?.toDouble())))),
+        coordinates: json["coordinates"] == null ? [] : List<List<double>>.from(json["coordinates"]!.map((x) => List<double>.from(x.map((x) => x?.toDouble())))),
     );
 
     Map<String, dynamic> toJson() => {
         "type": geometryTypeValues.reverse[type],
-        "coordinates": List<dynamic>.from(coordinates.map((x) => List<dynamic>.from(x.map((x) => x)))),
+        "coordinates": coordinates == null ? [] : List<dynamic>.from(coordinates!.map((x) => List<dynamic>.from(x.map((x) => x)))),
     };
 }
 
@@ -120,16 +125,16 @@ final geometryTypeValues = EnumValues({
 });
 
 class FeatureProperties {
-    final int osmId;
+    final int? osmId;
     final Bicycle? bicycle;
     final String? ref;
-    final Highway highway;
+    final Construction? highway;
     final Surface? surface;
     final String? name;
     final Bicycle? oneway;
     final Bicycle? bridge;
     final String? layer;
-    final Highway? construction;
+    final Construction? construction;
     final Access? access;
     final Tunnel? tunnel;
     final Bicycle? covered;
@@ -150,52 +155,52 @@ class FeatureProperties {
     final String? intName;
 
     FeatureProperties({
-        required this.osmId,
-        required this.bicycle,
-        required this.ref,
-        required this.highway,
-        required this.surface,
-        required this.name,
-        required this.oneway,
-        required this.bridge,
-        required this.layer,
-        required this.construction,
-        required this.access,
-        required this.tunnel,
-        required this.covered,
-        required this.service,
-        required this.cutting,
-        required this.junction,
-        required this.natName,
-        required this.lanes,
-        required this.smoothness,
-        required this.maxheight,
-        required this.altName,
-        required this.parkingLaneBoth,
-        required this.maxspeed,
-        required this.ford,
-        required this.mechanical,
-        required this.parkingLaneLeft,
-        required this.laneMarkings,
-        required this.intName,
+        this.osmId,
+        this.bicycle,
+        this.ref,
+        this.highway,
+        this.surface,
+        this.name,
+        this.oneway,
+        this.bridge,
+        this.layer,
+        this.construction,
+        this.access,
+        this.tunnel,
+        this.covered,
+        this.service,
+        this.cutting,
+        this.junction,
+        this.natName,
+        this.lanes,
+        this.smoothness,
+        this.maxheight,
+        this.altName,
+        this.parkingLaneBoth,
+        this.maxspeed,
+        this.ford,
+        this.mechanical,
+        this.parkingLaneLeft,
+        this.laneMarkings,
+        this.intName,
     });
 
     factory FeatureProperties.fromJson(Map<String, dynamic> json) => FeatureProperties(
         osmId: json["osm_id"],
-        bicycle: bicycleValues.map[json["bicycle"]]!,
+        bicycle: bicycleValues.map[json["bicycle"]],
         ref: json["ref"],
-        highway: highwayValues.map[json["highway"]]!,
-        surface: surfaceValues.map[json["surface"]]!,
+        highway: constructionValues.map[json["highway"]],
+        surface: surfaceValues.map[json["surface"]],
         name: json["name"],
-        oneway: bicycleValues.map[json["oneway"]]!,
-        bridge: bicycleValues.map[json["bridge"]]!,
+        oneway: bicycleValues.map[json["oneway"]],
+        bridge: bicycleValues.map[json["bridge"]],
         layer: json["layer"],
-        construction: highwayValues.map[json["construction"]]!,
-        access: accessValues.map[json["access"]]!,
-        tunnel: tunnelValues.map[json["tunnel"]]!,
-        covered: bicycleValues.map[json["covered"]]!,
-        service: serviceValues.map[json["service"]]!,
-        cutting: bicycleValues.map[json["cutting"]]!,
+        construction: constructionValues.map[json["construction"]],
+        access: accessValues.map[json["access"]],
+        tunnel: tunnelValues.map[json["tunnel"]],
+        covered: bicycleValues.map[json["covered"]],
+        service: serviceValues.map[json["service"]],
+        cutting: bicycleValues.map[json["cutting"]],
         junction: json["junction"],
         natName: json["nat_name"],
         lanes: json["lanes"],
@@ -204,10 +209,10 @@ class FeatureProperties {
         altName: json["alt_name"],
         parkingLaneBoth: json["parking:lane:both"],
         maxspeed: json["maxspeed"],
-        ford: bicycleValues.map[json["ford"]]!,
-        mechanical: bicycleValues.map[json["mechanical"]]!,
+        ford: bicycleValues.map[json["ford"]],
+        mechanical: bicycleValues.map[json["mechanical"]],
         parkingLaneLeft: json["parking:lane:left"],
-        laneMarkings: bicycleValues.map[json["lane_markings"]]!,
+        laneMarkings: bicycleValues.map[json["lane_markings"]],
         intName: json["int_name"],
     );
 
@@ -215,13 +220,13 @@ class FeatureProperties {
         "osm_id": osmId,
         "bicycle": bicycleValues.reverse[bicycle],
         "ref": ref,
-        "highway": highwayValues.reverse[highway],
+        "highway": constructionValues.reverse[highway],
         "surface": surfaceValues.reverse[surface],
         "name": name,
         "oneway": bicycleValues.reverse[oneway],
         "bridge": bicycleValues.reverse[bridge],
         "layer": layer,
-        "construction": highwayValues.reverse[construction],
+        "construction": constructionValues.reverse[construction],
         "access": accessValues.reverse[access],
         "tunnel": tunnelValues.reverse[tunnel],
         "covered": bicycleValues.reverse[covered],
@@ -265,7 +270,7 @@ final bicycleValues = EnumValues({
     "yes": Bicycle.YES
 });
 
-enum Highway {
+enum Construction {
     CONSTRUCTION,
     FOOTWAY,
     RESIDENTIAL,
@@ -278,17 +283,17 @@ enum Highway {
     UNCLASSIFIED
 }
 
-final highwayValues = EnumValues({
-    "construction": Highway.CONSTRUCTION,
-    "footway": Highway.FOOTWAY,
-    "residential": Highway.RESIDENTIAL,
-    "secondary": Highway.SECONDARY,
-    "service": Highway.SERVICE,
-    "steps": Highway.STEPS,
-    "tertiary": Highway.TERTIARY,
-    "tertiary_link": Highway.TERTIARY_LINK,
-    "trunk": Highway.TRUNK,
-    "unclassified": Highway.UNCLASSIFIED
+final constructionValues = EnumValues({
+    "construction": Construction.CONSTRUCTION,
+    "footway": Construction.FOOTWAY,
+    "residential": Construction.RESIDENTIAL,
+    "secondary": Construction.SECONDARY,
+    "service": Construction.SERVICE,
+    "steps": Construction.STEPS,
+    "tertiary": Construction.TERTIARY,
+    "tertiary_link": Construction.TERTIARY_LINK,
+    "trunk": Construction.TRUNK,
+    "unclassified": Construction.UNCLASSIFIED
 });
 
 enum Service {

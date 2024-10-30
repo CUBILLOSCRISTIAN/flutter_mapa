@@ -1,4 +1,4 @@
-import 'package:flutter_mapa/domain/models/node.dart';
+import 'package:flutter_mapa/domain/models/Graph/node.dart';
 
 class Graph {
   final Map<String, Node> nodes;

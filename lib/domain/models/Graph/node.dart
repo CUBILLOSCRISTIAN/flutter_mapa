@@ -1,4 +1,4 @@
-import 'package:flutter_mapa/domain/models/edge.dart';
+import 'package:flutter_mapa/domain/models/Graph/edge.dart';
 import 'package:latlong2/latlong.dart';
 
 class Node {
