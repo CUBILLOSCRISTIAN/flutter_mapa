@@ -11,25 +11,56 @@ class SearchItemPOI extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Card(
-      margin: const EdgeInsets.symmetric(vertical: 10, horizontal: 15),
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(15),
-      ),
-      elevation: 5,
-      child: ListTile(
-        leading: Icon(Icons.place, color: Theme.of(context).primaryColor),
-        title: Text(
-          poi.name,
-          style: TextStyle(
-            fontSize: 18,
-            fontWeight: FontWeight.bold,
+    final textStyle = Theme.of(context).textTheme;
+    final size = MediaQuery.of(context).size;
+
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+      child: Row(
+        children: [
+          //Image
+          SizedBox(
+            width: size.width * 0.2,
+            child: ClipRRect(
+                borderRadius: BorderRadius.circular(10),
+                child: Image.network(poi.imageURL)),
           ),
-        ),
-        subtitle: Text(poi.description),
-        onTap: () {
-          
-        },
+          const SizedBox(
+            width: 10,
+          ),
+          //Description
+          SizedBox(
+            width: size.width * 0.7,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  poi.name,
+                  style: textStyle.titleMedium,
+                ),
+                Text(
+                  poi.description,
+                  style: textStyle.bodyMedium,
+                  maxLines: 2,
+                  overflow: TextOverflow.ellipsis,
+                ),
+                Row(
+                  children: [
+                    Icon(Icons.access_time, color: Colors.grey[600],),
+                    SizedBox(width: 5,),
+                    Text(
+                      poi.openingHours,
+                      style: textStyle.bodySmall?.copyWith(color: Colors.grey[700]),
+                      ),
+
+                  ],
+                )
+              ],
+            ),
+          ),
+
+          //Icon for hours
+        ],
       ),
     );
   }

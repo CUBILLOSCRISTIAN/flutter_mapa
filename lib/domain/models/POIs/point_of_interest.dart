@@ -4,6 +4,8 @@ class PointOfInterest {
   final String description;
   final double latitude;
   final double longitude;
+  final String imageURL;
+  final String openingHours;
   final type = 'Point';
 
   PointOfInterest({
@@ -12,6 +14,8 @@ class PointOfInterest {
     required this.description,
     required this.latitude,
     required this.longitude,
+    required this.imageURL,
+    required this.openingHours,
   });
 
 }

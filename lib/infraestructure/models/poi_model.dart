@@ -6,6 +6,8 @@ class PointOfInterestModel extends PointOfInterest {
     required super.description,
     required super.latitude,
     required super.longitude,
+    required super.imageURL,
+    required super.openingHours,
   });
 
   factory PointOfInterestModel.fromJson(Map<String, dynamic> json) {
@@ -19,6 +21,8 @@ class PointOfInterestModel extends PointOfInterest {
       description: properties['description'] ?? 'Sin descripción',
       latitude: geometry['coordinates'] != null ? geometry['coordinates'][1] ?? 0.0 : 0.0,
       longitude: geometry['coordinates'] != null ? geometry['coordinates'][0] ?? 0.0 : 0.0,
+      imageURL: properties['imageURL'] ?? 'https://upload.wikimedia.org/wikipedia/commons/1/14/No_Image_Available.jpg?20200913095930',
+      openingHours: properties['opening_hours'] ?? 'Sin horario de apertura',
     );
   }
 

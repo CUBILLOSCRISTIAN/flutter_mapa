@@ -50,10 +50,7 @@ class _MapaPageState extends State<MapaPage> {
   @override
   Widget build(BuildContext context) {
     LocationController ubicacionController = Get.find();
-    GraphController graphController = Get.find();
-    // PoisController poisController = Get.find();
-
-    // List<PointOfInterest> pois = poisController.poiList;
+    
 
     return Scaffold(
       body: Center(
@@ -113,19 +110,19 @@ class _MapaPageState extends State<MapaPage> {
           ),
           moveAnimationDuration: Duration.zero,
         ),
-        MarkerLayer(markers: [
-          for (var point in markersList)
-            Marker(
-              width: 40.0,
-              height: 40.0,
-              point: point,
-              child: const Icon(
-                Icons.location_on,
-                size: 30.0,
-                color: Colors.red,
-              ),
-            ),
-        ]),
+        // MarkerLayer(markers: [
+        //   for (var point in markersList)
+        //     Marker(
+        //       width: 40.0,
+        //       height: 40.0,
+        //       point: point,
+        //       child: const Icon(
+        //         Icons.location_on,
+        //         size: 30.0,
+        //         color: Colors.red,
+        //       ),
+        //     ),
+        // ]),
         PolylineLayer(
           polylines: [
             Polyline(

@@ -5,21 +5,19 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-74.8501489, 11.0175635]
+        "coordinates": [
+          -74.8501489,
+          11.0175635
+        ]
       },
       "properties": {
-        "name": "Bano",
+        "name": "Baño",
         "type": "Tipo por definir",
-        "description": "",
-        "opening_hours": "",
-        "contact_info": {
-          "phone": "",
-          "email": ""
-        },
-        "tags": ["toilets"],
-        "level": null,
-        "accessibility": "unknown",
-        "last_updated": "",
+        "description": "This is a baño.",
+        "opening_hours": "6:30 am - 8:30 pm.",
+        "tags": [
+          "toilets"
+        ],
         "category": "general",
         "image_url": ""
       }
@@ -28,67 +26,19 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-74.8504144, 11.0177306]
-      },
-      "properties": {
-        "name": "Dispensador de agua",
-        "type": "Tipo por definir",
-        "description": "",
-        "opening_hours": "",
-        "contact_info": {
-          "phone": "",
-          "email": ""
-        },
-        "tags": ["drinking_water"],
-        "level": null,
-        "accessibility": "unknown",
-        "last_updated": "",
-        "category": "general",
-        "image_url": ""
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-74.8502995, 11.0178018]
-      },
-      "properties": {
-        "name": null,
-        "type": "Tipo por definir",
-        "description": "",
-        "opening_hours": "",
-        "contact_info": {
-          "phone": "",
-          "email": ""
-        },
-        "tags": ["toilets"],
-        "level": null,
-        "accessibility": "unknown",
-        "last_updated": "",
-        "category": "general",
-        "image_url": ""
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-74.8519564, 11.017983]
+        "coordinates": [
+          -74.8504144,
+          11.0177306
+        ]
       },
       "properties": {
         "name": "Dispensador de agua",
         "type": "Tipo por definir",
-        "description": "",
-        "opening_hours": "",
-        "contact_info": {
-          "phone": "",
-          "email": ""
-        },
-        "tags": ["drinking_water"],
-        "level": null,
-        "accessibility": "unknown",
-        "last_updated": "",
+        "description": "This is a dispensador de agua.",
+        "opening_hours": "6:30 am - 8:30 pm.",
+        "tags": [
+          "drinking_water"
+        ],
         "category": "general",
         "image_url": ""
       }
@@ -97,21 +47,19 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-74.8520217, 11.0185454]
+        "coordinates": [
+          -74.8502995,
+          11.0178018
+        ]
       },
       "properties": {
-        "name": null,
+        "name": "Baño",
         "type": "Tipo por definir",
-        "description": "",
-        "opening_hours": "",
-        "contact_info": {
-          "phone": "",
-          "email": ""
-        },
-        "tags": ["toilets"],
-        "level": null,
-        "accessibility": "unknown",
-        "last_updated": "",
+        "description": "This is a baño.",
+        "opening_hours": "6:30 am - 8:30 pm.",
+        "tags": [
+          "toilets"
+        ],
         "category": "general",
         "image_url": ""
       }
@@ -120,21 +68,19 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-74.8518026, 11.0182586]
+        "coordinates": [
+          -74.8519564,
+          11.017983
+        ]
       },
       "properties": {
-        "name": null,
+        "name": "Dispensador de agua",
         "type": "Tipo por definir",
-        "description": "",
-        "opening_hours": "",
-        "contact_info": {
-          "phone": "",
-          "email": ""
-        },
-        "tags": ["toilets"],
-        "level": null,
-        "accessibility": "unknown",
-        "last_updated": "",
+        "description": "This is a dispensador de agua.",
+        "opening_hours": "6:30 am - 8:30 pm.",
+        "tags": [
+          "drinking_water"
+        ],
         "category": "general",
         "image_url": ""
       }
@@ -143,21 +89,61 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-74.8517817, 11.0189283]
+        "coordinates": [
+          -74.8520217,
+          11.0185454
+        ]
+      },
+      "properties": {
+        "name": "Baño",
+        "type": "Tipo por definir",
+        "description": "This is a baño.",
+        "opening_hours": "6:30 am - 8:30 pm.",
+        "tags": [
+          "toilets"
+        ],
+        "category": "general",
+        "image_url": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.8518026,
+          11.0182586
+        ]
+      },
+      "properties": {
+        "name": "Baño",
+        "type": "Tipo por definir",
+        "description": "This is a baño.",
+        "opening_hours": "6:30 am - 8:30 pm.",
+        "tags": [
+          "toilets"
+        ],
+        "category": "general",
+        "image_url": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.8517817,
+          11.0189283
+        ]
       },
       "properties": {
         "name": "Centro Medico Uninorte",
         "type": "Tipo por definir",
-        "description": "",
-        "opening_hours": "",
-        "contact_info": {
-          "phone": "",
-          "email": ""
-        },
-        "tags": ["clinic"],
-        "level": null,
-        "accessibility": "unknown",
-        "last_updated": "",
+        "description": "This is a centro medico uninorte.",
+        "opening_hours": "6:30 am - 8:30 pm.",
+        "tags": [
+          "clinic"
+        ],
         "category": "general",
         "image_url": ""
       }
@@ -166,21 +152,19 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-74.8511888, 11.0181308]
+        "coordinates": [
+          -74.8511888,
+          11.0181308
+        ]
       },
       "properties": {
-        "name": null,
+        "name": "Baño",
         "type": "Tipo por definir",
-        "description": "",
-        "opening_hours": "",
-        "contact_info": {
-          "phone": "",
-          "email": ""
-        },
-        "tags": ["toilets"],
-        "level": null,
-        "accessibility": "unknown",
-        "last_updated": "",
+        "description": "This is a baño.",
+        "opening_hours": "6:30 am - 8:30 pm.",
+        "tags": [
+          "toilets"
+        ],
         "category": "general",
         "image_url": ""
       }
@@ -189,21 +173,17 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-74.8509571, 11.0181148]
+        "coordinates": [
+          -74.8509571,
+          11.0181148
+        ]
       },
       "properties": {
         "name": "Estatua de Karl C. Parrish Jr.",
         "type": "Tipo por definir",
-        "description": "",
-        "opening_hours": "",
-        "contact_info": {
-          "phone": "",
-          "email": ""
-        },
+        "description": "This is a estatua de karl c. parrish jr..",
+        "opening_hours": "6:30 am - 8:30 pm.",
         "tags": [],
-        "level": null,
-        "accessibility": "unknown",
-        "last_updated": "",
         "category": "general",
         "image_url": ""
       }
@@ -212,21 +192,19 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-74.8509818, 11.0183754]
+        "coordinates": [
+          -74.8509818,
+          11.0183754
+        ]
       },
       "properties": {
         "name": "Dispensador de agua",
         "type": "Tipo por definir",
-        "description": "",
-        "opening_hours": "",
-        "contact_info": {
-          "phone": "",
-          "email": ""
-        },
-        "tags": ["drinking_water"],
-        "level": null,
-        "accessibility": "unknown",
-        "last_updated": "",
+        "description": "This is a dispensador de agua.",
+        "opening_hours": "6:30 am - 8:30 pm.",
+        "tags": [
+          "drinking_water"
+        ],
         "category": "general",
         "image_url": ""
       }
@@ -235,21 +213,19 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-74.8509132, 11.0184222]
+        "coordinates": [
+          -74.8509132,
+          11.0184222
+        ]
       },
       "properties": {
-        "name": null,
+        "name": "Fast_food",
         "type": "Tipo por definir",
-        "description": "",
-        "opening_hours": "",
-        "contact_info": {
-          "phone": "",
-          "email": ""
-        },
-        "tags": ["fast_food"],
-        "level": null,
-        "accessibility": "unknown",
-        "last_updated": "",
+        "description": "This is a fast_food.",
+        "opening_hours": "6:30 am - 8:30 pm.",
+        "tags": [
+          "fast_food"
+        ],
         "category": "general",
         "image_url": ""
       }
@@ -258,21 +234,19 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-74.8502903, 11.018244]
+        "coordinates": [
+          -74.8502903,
+          11.018244
+        ]
       },
       "properties": {
         "name": "Gelateria Du Nord",
         "type": "Tipo por definir",
-        "description": "",
-        "opening_hours": "",
-        "contact_info": {
-          "phone": "",
-          "email": ""
-        },
-        "tags": ["ice_cream"],
-        "level": null,
-        "accessibility": "unknown",
-        "last_updated": "",
+        "description": "This is a gelateria du nord.",
+        "opening_hours": "6:30 am - 8:30 pm.",
+        "tags": [
+          "ice_cream"
+        ],
         "category": "general",
         "image_url": ""
       }
@@ -281,21 +255,19 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-74.8499446, 11.0182212]
+        "coordinates": [
+          -74.8499446,
+          11.0182212
+        ]
       },
       "properties": {
         "name": "Uninorte FM Estéreo",
         "type": "Tipo por definir",
-        "description": "",
-        "opening_hours": "",
-        "contact_info": {
-          "phone": "",
-          "email": ""
-        },
-        "tags": ["studio"],
-        "level": null,
-        "accessibility": "unknown",
-        "last_updated": "",
+        "description": "This is a uninorte fm estéreo.",
+        "opening_hours": "6:30 am - 8:30 pm.",
+        "tags": [
+          "studio"
+        ],
         "category": "general",
         "image_url": ""
       }
@@ -304,21 +276,19 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-74.8503538, 11.0183272]
+        "coordinates": [
+          -74.8503538,
+          11.0183272
+        ]
       },
       "properties": {
-        "name": null,
+        "name": "Vending_machine",
         "type": "Tipo por definir",
-        "description": "",
-        "opening_hours": "",
-        "contact_info": {
-          "phone": "",
-          "email": ""
-        },
-        "tags": ["vending_machine"],
-        "level": null,
-        "accessibility": "unknown",
-        "last_updated": "",
+        "description": "This is a vending_machine.",
+        "opening_hours": "6:30 am - 8:30 pm.",
+        "tags": [
+          "vending_machine"
+        ],
         "category": "general",
         "image_url": ""
       }
@@ -327,21 +297,19 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-74.850327, 11.018322]
+        "coordinates": [
+          -74.850327,
+          11.018322
+        ]
       },
       "properties": {
-        "name": null,
+        "name": "Vending_machine",
         "type": "Tipo por definir",
-        "description": "",
-        "opening_hours": "",
-        "contact_info": {
-          "phone": "",
-          "email": ""
-        },
-        "tags": ["vending_machine"],
-        "level": null,
-        "accessibility": "unknown",
-        "last_updated": "",
+        "description": "This is a vending_machine.",
+        "opening_hours": "6:30 am - 8:30 pm.",
+        "tags": [
+          "vending_machine"
+        ],
         "category": "general",
         "image_url": ""
       }
@@ -350,21 +318,19 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-74.850299, 11.0183162]
+        "coordinates": [
+          -74.850299,
+          11.0183162
+        ]
       },
       "properties": {
-        "name": null,
+        "name": "Fast_food",
         "type": "Tipo por definir",
-        "description": "",
-        "opening_hours": "",
-        "contact_info": {
-          "phone": "",
-          "email": ""
-        },
-        "tags": ["fast_food"],
-        "level": null,
-        "accessibility": "unknown",
-        "last_updated": "",
+        "description": "This is a fast_food.",
+        "opening_hours": "6:30 am - 8:30 pm.",
+        "tags": [
+          "fast_food"
+        ],
         "category": "general",
         "image_url": ""
       }
@@ -373,21 +339,17 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-74.8501588, 11.0185279]
+        "coordinates": [
+          -74.8501588,
+          11.0185279
+        ]
       },
       "properties": {
-        "name": null,
+        "name": "Unknown",
         "type": "Tipo por definir",
-        "description": "",
-        "opening_hours": "",
-        "contact_info": {
-          "phone": "",
-          "email": ""
-        },
+        "description": "This is a unknown.",
+        "opening_hours": "6:30 am - 8:30 pm.",
         "tags": [],
-        "level": null,
-        "accessibility": "unknown",
-        "last_updated": "",
         "category": "general",
         "image_url": ""
       }
@@ -396,21 +358,19 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-74.850153, 11.0185484]
+        "coordinates": [
+          -74.850153,
+          11.0185484
+        ]
       },
       "properties": {
-        "name": null,
+        "name": "Baño",
         "type": "Tipo por definir",
-        "description": "",
-        "opening_hours": "",
-        "contact_info": {
-          "phone": "",
-          "email": ""
-        },
-        "tags": ["toilets"],
-        "level": null,
-        "accessibility": "unknown",
-        "last_updated": "",
+        "description": "This is a baño.",
+        "opening_hours": "6:30 am - 8:30 pm.",
+        "tags": [
+          "toilets"
+        ],
         "category": "general",
         "image_url": ""
       }
@@ -419,21 +379,19 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-74.850145, 11.01857]
+        "coordinates": [
+          -74.850145,
+          11.01857
+        ]
       },
       "properties": {
         "name": "Dispensador de agua",
         "type": "Tipo por definir",
-        "description": "",
-        "opening_hours": "",
-        "contact_info": {
-          "phone": "",
-          "email": ""
-        },
-        "tags": ["drinking_water"],
-        "level": null,
-        "accessibility": "unknown",
-        "last_updated": "",
+        "description": "This is a dispensador de agua.",
+        "opening_hours": "6:30 am - 8:30 pm.",
+        "tags": [
+          "drinking_water"
+        ],
         "category": "general",
         "image_url": ""
       }
@@ -442,21 +400,19 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-74.850887, 11.0187283]
+        "coordinates": [
+          -74.850887,
+          11.0187283
+        ]
       },
       "properties": {
         "name": "Sala de Proyecciones Gabriel Garcia Marquez",
         "type": "Tipo por definir",
-        "description": "",
-        "opening_hours": "",
-        "contact_info": {
-          "phone": "",
-          "email": ""
-        },
-        "tags": ["cinema"],
-        "level": null,
-        "accessibility": "unknown",
-        "last_updated": "",
+        "description": "This is a sala de proyecciones gabriel garcia marquez.",
+        "opening_hours": "6:30 am - 8:30 pm.",
+        "tags": [
+          "cinema"
+        ],
         "category": "general",
         "image_url": ""
       }
@@ -465,21 +421,19 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-74.8509467, 11.0187445]
+        "coordinates": [
+          -74.8509467,
+          11.0187445
+        ]
       },
       "properties": {
         "name": "Dispensador de agua",
         "type": "Tipo por definir",
-        "description": "",
-        "opening_hours": "",
-        "contact_info": {
-          "phone": "",
-          "email": ""
-        },
-        "tags": ["drinking_water"],
-        "level": null,
-        "accessibility": "unknown",
-        "last_updated": "",
+        "description": "This is a dispensador de agua.",
+        "opening_hours": "6:30 am - 8:30 pm.",
+        "tags": [
+          "drinking_water"
+        ],
         "category": "general",
         "image_url": ""
       }
@@ -488,21 +442,19 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-74.8509417, 11.0187708]
+        "coordinates": [
+          -74.8509417,
+          11.0187708
+        ]
       },
       "properties": {
-        "name": null,
+        "name": "Baño",
         "type": "Tipo por definir",
-        "description": "",
-        "opening_hours": "",
-        "contact_info": {
-          "phone": "",
-          "email": ""
-        },
-        "tags": ["toilets"],
-        "level": null,
-        "accessibility": "unknown",
-        "last_updated": "",
+        "description": "This is a baño.",
+        "opening_hours": "6:30 am - 8:30 pm.",
+        "tags": [
+          "toilets"
+        ],
         "category": "general",
         "image_url": ""
       }
@@ -511,21 +463,19 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-74.8508713, 11.0187676]
+        "coordinates": [
+          -74.8508713,
+          11.0187676
+        ]
       },
       "properties": {
-        "name": null,
+        "name": "Vending_machine",
         "type": "Tipo por definir",
-        "description": "",
-        "opening_hours": "",
-        "contact_info": {
-          "phone": "",
-          "email": ""
-        },
-        "tags": ["vending_machine"],
-        "level": null,
-        "accessibility": "unknown",
-        "last_updated": "",
+        "description": "This is a vending_machine.",
+        "opening_hours": "6:30 am - 8:30 pm.",
+        "tags": [
+          "vending_machine"
+        ],
         "category": "general",
         "image_url": ""
       }
@@ -534,21 +484,19 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-74.8508545, 11.0187646]
+        "coordinates": [
+          -74.8508545,
+          11.0187646
+        ]
       },
       "properties": {
-        "name": null,
+        "name": "Vending_machine",
         "type": "Tipo por definir",
-        "description": "",
-        "opening_hours": "",
-        "contact_info": {
-          "phone": "",
-          "email": ""
-        },
-        "tags": ["vending_machine"],
-        "level": null,
-        "accessibility": "unknown",
-        "last_updated": "",
+        "description": "This is a vending_machine.",
+        "opening_hours": "6:30 am - 8:30 pm.",
+        "tags": [
+          "vending_machine"
+        ],
         "category": "general",
         "image_url": ""
       }
@@ -557,21 +505,19 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-74.8508333, 11.0187839]
+        "coordinates": [
+          -74.8508333,
+          11.0187839
+        ]
       },
       "properties": {
-        "name": null,
+        "name": "Fast_food",
         "type": "Tipo por definir",
-        "description": "",
-        "opening_hours": "",
-        "contact_info": {
-          "phone": "",
-          "email": ""
-        },
-        "tags": ["fast_food"],
-        "level": null,
-        "accessibility": "unknown",
-        "last_updated": "",
+        "description": "This is a fast_food.",
+        "opening_hours": "6:30 am - 8:30 pm.",
+        "tags": [
+          "fast_food"
+        ],
         "category": "general",
         "image_url": ""
       }
@@ -580,21 +526,17 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-74.8508942, 11.0189988]
+        "coordinates": [
+          -74.8508942,
+          11.0189988
+        ]
       },
       "properties": {
         "name": "KM5",
         "type": "Tipo por definir",
-        "description": "",
-        "opening_hours": "",
-        "contact_info": {
-          "phone": "",
-          "email": ""
-        },
+        "description": "This is a km5.",
+        "opening_hours": "6:30 am - 8:30 pm.",
         "tags": [],
-        "level": null,
-        "accessibility": "unknown",
-        "last_updated": "",
         "category": "general",
         "image_url": ""
       }
@@ -603,21 +545,17 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-74.8508188, 11.0189524]
+        "coordinates": [
+          -74.8508188,
+          11.0189524
+        ]
       },
       "properties": {
         "name": "Du Nord Store",
         "type": "Tipo por definir",
-        "description": "",
-        "opening_hours": "",
-        "contact_info": {
-          "phone": "",
-          "email": ""
-        },
+        "description": "This is a du nord store.",
+        "opening_hours": "6:30 am - 8:30 pm.",
         "tags": [],
-        "level": null,
-        "accessibility": "unknown",
-        "last_updated": "",
         "category": "general",
         "image_url": ""
       }
@@ -626,21 +564,19 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-74.850784, 11.0190138]
+        "coordinates": [
+          -74.850784,
+          11.0190138
+        ]
       },
       "properties": {
         "name": "Bancolombia",
         "type": "Tipo por definir",
-        "description": "",
-        "opening_hours": "",
-        "contact_info": {
-          "phone": "",
-          "email": ""
-        },
-        "tags": ["bank"],
-        "level": null,
-        "accessibility": "unknown",
-        "last_updated": "",
+        "description": "This is a bancolombia.",
+        "opening_hours": "6:30 am - 8:30 pm.",
+        "tags": [
+          "bank"
+        ],
         "category": "general",
         "image_url": ""
       }
@@ -649,21 +585,19 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-74.8507662, 11.0190748]
+        "coordinates": [
+          -74.8507662,
+          11.0190748
+        ]
       },
       "properties": {
         "name": "Banco de Bogotá",
         "type": "Tipo por definir",
-        "description": "",
-        "opening_hours": "",
-        "contact_info": {
-          "phone": "",
-          "email": ""
-        },
-        "tags": ["bank"],
-        "level": null,
-        "accessibility": "unknown",
-        "last_updated": "",
+        "description": "This is a banco de bogotá.",
+        "opening_hours": "6:30 am - 8:30 pm.",
+        "tags": [
+          "bank"
+        ],
         "category": "general",
         "image_url": ""
       }
@@ -672,21 +606,19 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-74.8502734, 11.0186287]
+        "coordinates": [
+          -74.8502734,
+          11.0186287
+        ]
       },
       "properties": {
-        "name": null,
+        "name": "Fast_food",
         "type": "Tipo por definir",
-        "description": "",
-        "opening_hours": "",
-        "contact_info": {
-          "phone": "",
-          "email": ""
-        },
-        "tags": ["fast_food"],
-        "level": null,
-        "accessibility": "unknown",
-        "last_updated": "",
+        "description": "This is a fast_food.",
+        "opening_hours": "6:30 am - 8:30 pm.",
+        "tags": [
+          "fast_food"
+        ],
         "category": "general",
         "image_url": ""
       }
@@ -695,21 +627,17 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-74.8502477, 11.0189065]
+        "coordinates": [
+          -74.8502477,
+          11.0189065
+        ]
       },
       "properties": {
-        "name": null,
+        "name": "Unknown",
         "type": "Tipo por definir",
-        "description": "",
-        "opening_hours": "",
-        "contact_info": {
-          "phone": "",
-          "email": ""
-        },
+        "description": "This is a unknown.",
+        "opening_hours": "6:30 am - 8:30 pm.",
         "tags": [],
-        "level": null,
-        "accessibility": "unknown",
-        "last_updated": "",
         "category": "general",
         "image_url": ""
       }
@@ -718,21 +646,19 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-74.8501042, 11.0187028]
+        "coordinates": [
+          -74.8501042,
+          11.0187028
+        ]
       },
       "properties": {
-        "name": null,
+        "name": "Atm",
         "type": "Tipo por definir",
-        "description": "",
-        "opening_hours": "",
-        "contact_info": {
-          "phone": "",
-          "email": ""
-        },
-        "tags": ["atm"],
-        "level": null,
-        "accessibility": "unknown",
-        "last_updated": "",
+        "description": "This is a atm.",
+        "opening_hours": "6:30 am - 8:30 pm.",
+        "tags": [
+          "atm"
+        ],
         "category": "general",
         "image_url": ""
       }
@@ -741,21 +667,19 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-74.8499517, 11.0186967]
+        "coordinates": [
+          -74.8499517,
+          11.0186967
+        ]
       },
       "properties": {
         "name": "Auditorio Marvel Moreno",
         "type": "Tipo por definir",
-        "description": "",
-        "opening_hours": "",
-        "contact_info": {
-          "phone": "",
-          "email": ""
-        },
-        "tags": ["conference_centre"],
-        "level": null,
-        "accessibility": "unknown",
-        "last_updated": "",
+        "description": "This is a auditorio marvel moreno.",
+        "opening_hours": "6:30 am - 8:30 pm.",
+        "tags": [
+          "conference_centre"
+        ],
         "category": "general",
         "image_url": ""
       }
@@ -764,21 +688,19 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-74.8499754, 11.0189176]
+        "coordinates": [
+          -74.8499754,
+          11.0189176
+        ]
       },
       "properties": {
         "name": "Restaurante 1966",
         "type": "Tipo por definir",
-        "description": "",
-        "opening_hours": "",
-        "contact_info": {
-          "phone": "",
-          "email": ""
-        },
-        "tags": ["restaurant"],
-        "level": null,
-        "accessibility": "unknown",
-        "last_updated": "",
+        "description": "This is a restaurante 1966.",
+        "opening_hours": "6:30 am - 8:30 pm.",
+        "tags": [
+          "restaurant"
+        ],
         "category": "general",
         "image_url": ""
       }
@@ -787,21 +709,19 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-74.8498748, 11.0188754]
+        "coordinates": [
+          -74.8498748,
+          11.0188754
+        ]
       },
       "properties": {
         "name": "Du Nord Plaza",
         "type": "Tipo por definir",
-        "description": "",
-        "opening_hours": "",
-        "contact_info": {
-          "phone": "",
-          "email": ""
-        },
-        "tags": ["cafe"],
-        "level": null,
-        "accessibility": "unknown",
-        "last_updated": "",
+        "description": "This is a du nord plaza.",
+        "opening_hours": "6:30 am - 8:30 pm.",
+        "tags": [
+          "cafe"
+        ],
         "category": "general",
         "image_url": ""
       }
@@ -810,21 +730,19 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-74.8504678, 11.0191474]
+        "coordinates": [
+          -74.8504678,
+          11.0191474
+        ]
       },
       "properties": {
         "name": "Du Nord Express",
         "type": "Tipo por definir",
-        "description": "",
-        "opening_hours": "",
-        "contact_info": {
-          "phone": "",
-          "email": ""
-        },
-        "tags": ["food_court"],
-        "level": null,
-        "accessibility": "unknown",
-        "last_updated": "",
+        "description": "This is a du nord express.",
+        "opening_hours": "6:30 am - 8:30 pm.",
+        "tags": [
+          "food_court"
+        ],
         "category": "general",
         "image_url": ""
       }
@@ -833,21 +751,17 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-74.8501568, 11.0189553]
+        "coordinates": [
+          -74.8501568,
+          11.0189553
+        ]
       },
       "properties": {
         "name": "Du Nord Graphique",
         "type": "Tipo por definir",
-        "description": "",
-        "opening_hours": "",
-        "contact_info": {
-          "phone": "",
-          "email": ""
-        },
+        "description": "This is a du nord graphique.",
+        "opening_hours": "6:30 am - 8:30 pm.",
         "tags": [],
-        "level": null,
-        "accessibility": "unknown",
-        "last_updated": "",
         "category": "general",
         "image_url": ""
       }
@@ -856,21 +770,19 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-74.850064, 11.0189745]
+        "coordinates": [
+          -74.850064,
+          11.0189745
+        ]
       },
       "properties": {
         "name": "La Creperia Du Nord",
         "type": "Tipo por definir",
-        "description": "",
-        "opening_hours": "",
-        "contact_info": {
-          "phone": "",
-          "email": ""
-        },
-        "tags": ["restaurant"],
-        "level": null,
-        "accessibility": "unknown",
-        "last_updated": "",
+        "description": "This is a la creperia du nord.",
+        "opening_hours": "6:30 am - 8:30 pm.",
+        "tags": [
+          "restaurant"
+        ],
         "category": "general",
         "image_url": ""
       }
@@ -879,21 +791,19 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-74.8499222, 11.0191848]
+        "coordinates": [
+          -74.8499222,
+          11.0191848
+        ]
       },
       "properties": {
         "name": "El Camión",
         "type": "Tipo por definir",
-        "description": "",
-        "opening_hours": "",
-        "contact_info": {
-          "phone": "",
-          "email": ""
-        },
-        "tags": ["fast_food"],
-        "level": null,
-        "accessibility": "unknown",
-        "last_updated": "",
+        "description": "This is a el camión.",
+        "opening_hours": "6:30 am - 8:30 pm.",
+        "tags": [
+          "fast_food"
+        ],
         "category": "general",
         "image_url": ""
       }
@@ -902,21 +812,17 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-74.8489126, 11.0175543]
+        "coordinates": [
+          -74.8489126,
+          11.0175543
+        ]
       },
       "properties": {
         "name": "Cristo de Manos Abiertas",
         "type": "Tipo por definir",
-        "description": "",
-        "opening_hours": "",
-        "contact_info": {
-          "phone": "",
-          "email": ""
-        },
+        "description": "This is a cristo de manos abiertas.",
+        "opening_hours": "6:30 am - 8:30 pm.",
         "tags": [],
-        "level": null,
-        "accessibility": "unknown",
-        "last_updated": "",
         "category": "general",
         "image_url": ""
       }
@@ -925,21 +831,19 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-74.8498449, 11.0192705]
+        "coordinates": [
+          -74.8498449,
+          11.0192705
+        ]
       },
       "properties": {
         "name": "Dispensador de agua",
         "type": "Tipo por definir",
-        "description": "",
-        "opening_hours": "",
-        "contact_info": {
-          "phone": "",
-          "email": ""
-        },
-        "tags": ["drinking_water"],
-        "level": null,
-        "accessibility": "unknown",
-        "last_updated": "",
+        "description": "This is a dispensador de agua.",
+        "opening_hours": "6:30 am - 8:30 pm.",
+        "tags": [
+          "drinking_water"
+        ],
         "category": "general",
         "image_url": ""
       }
@@ -948,21 +852,17 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-74.8497404, 11.0192401]
+        "coordinates": [
+          -74.8497404,
+          11.0192401
+        ]
       },
       "properties": {
-        "name": null,
+        "name": "Unknown",
         "type": "Tipo por definir",
-        "description": "",
-        "opening_hours": "",
-        "contact_info": {
-          "phone": "",
-          "email": ""
-        },
+        "description": "This is a unknown.",
+        "opening_hours": "6:30 am - 8:30 pm.",
         "tags": [],
-        "level": null,
-        "accessibility": "unknown",
-        "last_updated": "",
         "category": "general",
         "image_url": ""
       }
@@ -971,21 +871,19 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-74.8516088, 11.0193224]
+        "coordinates": [
+          -74.8516088,
+          11.0193224
+        ]
       },
       "properties": {
-        "name": null,
+        "name": "Baño",
         "type": "Tipo por definir",
-        "description": "",
-        "opening_hours": "",
-        "contact_info": {
-          "phone": "",
-          "email": ""
-        },
-        "tags": ["toilets"],
-        "level": null,
-        "accessibility": "unknown",
-        "last_updated": "",
+        "description": "This is a baño.",
+        "opening_hours": "6:30 am - 8:30 pm.",
+        "tags": [
+          "toilets"
+        ],
         "category": "general",
         "image_url": ""
       }
@@ -994,44 +892,19 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-74.8513626, 11.0194101]
-      },
-      "properties": {
-        "name": "Dispensador de agua",
-        "type": "Tipo por definir",
-        "description": "",
-        "opening_hours": "",
-        "contact_info": {
-          "phone": "",
-          "email": ""
-        },
-        "tags": ["drinking_water"],
-        "level": null,
-        "accessibility": "unknown",
-        "last_updated": "",
-        "category": "general",
-        "image_url": ""
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-74.8514388, 11.0196242]
+        "coordinates": [
+          -74.8513626,
+          11.0194101
+        ]
       },
       "properties": {
         "name": "Dispensador de agua",
         "type": "Tipo por definir",
-        "description": "",
-        "opening_hours": "",
-        "contact_info": {
-          "phone": "",
-          "email": ""
-        },
-        "tags": ["drinking_water"],
-        "level": null,
-        "accessibility": "unknown",
-        "last_updated": "",
+        "description": "This is a dispensador de agua.",
+        "opening_hours": "6:30 am - 8:30 pm.",
+        "tags": [
+          "drinking_water"
+        ],
         "category": "general",
         "image_url": ""
       }
@@ -1040,21 +913,40 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-74.8514685, 11.0196323]
+        "coordinates": [
+          -74.8514388,
+          11.0196242
+        ]
+      },
+      "properties": {
+        "name": "Dispensador de agua",
+        "type": "Tipo por definir",
+        "description": "This is a dispensador de agua.",
+        "opening_hours": "6:30 am - 8:30 pm.",
+        "tags": [
+          "drinking_water"
+        ],
+        "category": "general",
+        "image_url": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.8514685,
+          11.0196323
+        ]
       },
       "properties": {
         "name": "Zona de Microondas",
         "type": "Tipo por definir",
-        "description": "",
-        "opening_hours": "",
-        "contact_info": {
-          "phone": "",
-          "email": ""
-        },
-        "tags": ["fast_food"],
-        "level": null,
-        "accessibility": "unknown",
-        "last_updated": "",
+        "description": "This is a zona de microondas.",
+        "opening_hours": "6:30 am - 8:30 pm.",
+        "tags": [
+          "fast_food"
+        ],
         "category": "general",
         "image_url": ""
       }
@@ -1063,21 +955,19 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-74.8521003, 11.0205527]
+        "coordinates": [
+          -74.8521003,
+          11.0205527
+        ]
       },
       "properties": {
-        "name": null,
+        "name": "Baño",
         "type": "Tipo por definir",
-        "description": "",
-        "opening_hours": "",
-        "contact_info": {
-          "phone": "",
-          "email": ""
-        },
-        "tags": ["toilets"],
-        "level": null,
-        "accessibility": "unknown",
-        "last_updated": "",
+        "description": "This is a baño.",
+        "opening_hours": "6:30 am - 8:30 pm.",
+        "tags": [
+          "toilets"
+        ],
         "category": "general",
         "image_url": ""
       }
@@ -1086,21 +976,19 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-74.8521207, 11.0205935]
+        "coordinates": [
+          -74.8521207,
+          11.0205935
+        ]
       },
       "properties": {
         "name": "Dispensador de agua",
         "type": "Tipo por definir",
-        "description": "",
-        "opening_hours": "",
-        "contact_info": {
-          "phone": "",
-          "email": ""
-        },
-        "tags": ["drinking_water"],
-        "level": null,
-        "accessibility": "unknown",
-        "last_updated": "",
+        "description": "This is a dispensador de agua.",
+        "opening_hours": "6:30 am - 8:30 pm.",
+        "tags": [
+          "drinking_water"
+        ],
         "category": "general",
         "image_url": ""
       }
@@ -1109,21 +997,19 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-74.8521018, 11.0206142]
+        "coordinates": [
+          -74.8521018,
+          11.0206142
+        ]
       },
       "properties": {
         "name": "Zona de Microondas",
         "type": "Tipo por definir",
-        "description": "",
-        "opening_hours": "",
-        "contact_info": {
-          "phone": "",
-          "email": ""
-        },
-        "tags": ["fast_food"],
-        "level": null,
-        "accessibility": "unknown",
-        "last_updated": "",
+        "description": "This is a zona de microondas.",
+        "opening_hours": "6:30 am - 8:30 pm.",
+        "tags": [
+          "fast_food"
+        ],
         "category": "general",
         "image_url": ""
       }
@@ -1132,21 +1018,17 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-74.8513237, 11.020212]
+        "coordinates": [
+          -74.8513237,
+          11.020212
+        ]
       },
       "properties": {
         "name": "Museo Mapuka",
         "type": "Tipo por definir",
-        "description": "",
-        "opening_hours": "",
-        "contact_info": {
-          "phone": "",
-          "email": ""
-        },
+        "description": "This is a museo mapuka.",
+        "opening_hours": "6:30 am - 8:30 pm.",
         "tags": [],
-        "level": null,
-        "accessibility": "unknown",
-        "last_updated": "",
         "category": "general",
         "image_url": ""
       }
@@ -1155,21 +1037,19 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-74.8506343, 11.0195121]
+        "coordinates": [
+          -74.8506343,
+          11.0195121
+        ]
       },
       "properties": {
         "name": "Aula Confusio",
         "type": "Tipo por definir",
-        "description": "",
-        "opening_hours": "",
-        "contact_info": {
-          "phone": "",
-          "email": ""
-        },
-        "tags": ["social_centre"],
-        "level": null,
-        "accessibility": "unknown",
-        "last_updated": "",
+        "description": "This is a aula confusio.",
+        "opening_hours": "6:30 am - 8:30 pm.",
+        "tags": [
+          "social_centre"
+        ],
         "category": "general",
         "image_url": ""
       }
@@ -1178,21 +1058,19 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-74.8505884, 11.0197168]
+        "coordinates": [
+          -74.8505884,
+          11.0197168
+        ]
       },
       "properties": {
-        "name": null,
+        "name": "Vending_machine",
         "type": "Tipo por definir",
-        "description": "",
-        "opening_hours": "",
-        "contact_info": {
-          "phone": "",
-          "email": ""
-        },
-        "tags": ["vending_machine"],
-        "level": null,
-        "accessibility": "unknown",
-        "last_updated": "",
+        "description": "This is a vending_machine.",
+        "opening_hours": "6:30 am - 8:30 pm.",
+        "tags": [
+          "vending_machine"
+        ],
         "category": "general",
         "image_url": ""
       }
@@ -1201,21 +1079,19 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-74.850579, 11.0197405]
+        "coordinates": [
+          -74.850579,
+          11.0197405
+        ]
       },
       "properties": {
-        "name": null,
+        "name": "Vending_machine",
         "type": "Tipo por definir",
-        "description": "",
-        "opening_hours": "",
-        "contact_info": {
-          "phone": "",
-          "email": ""
-        },
-        "tags": ["vending_machine"],
-        "level": null,
-        "accessibility": "unknown",
-        "last_updated": "",
+        "description": "This is a vending_machine.",
+        "opening_hours": "6:30 am - 8:30 pm.",
+        "tags": [
+          "vending_machine"
+        ],
         "category": "general",
         "image_url": ""
       }
@@ -1224,21 +1100,19 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-74.8505622, 11.0198231]
+        "coordinates": [
+          -74.8505622,
+          11.0198231
+        ]
       },
       "properties": {
-        "name": null,
+        "name": "Baño",
         "type": "Tipo por definir",
-        "description": "",
-        "opening_hours": "",
-        "contact_info": {
-          "phone": "",
-          "email": ""
-        },
-        "tags": ["toilets"],
-        "level": null,
-        "accessibility": "unknown",
-        "last_updated": "",
+        "description": "This is a baño.",
+        "opening_hours": "6:30 am - 8:30 pm.",
+        "tags": [
+          "toilets"
+        ],
         "category": "general",
         "image_url": ""
       }
@@ -1247,21 +1121,19 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-74.8504536, 11.0194097]
+        "coordinates": [
+          -74.8504536,
+          11.0194097
+        ]
       },
       "properties": {
         "name": "La Esquina",
         "type": "Tipo por definir",
-        "description": "",
-        "opening_hours": "",
-        "contact_info": {
-          "phone": "",
-          "email": ""
-        },
-        "tags": ["food_court"],
-        "level": null,
-        "accessibility": "unknown",
-        "last_updated": "",
+        "description": "This is a la esquina.",
+        "opening_hours": "6:30 am - 8:30 pm.",
+        "tags": [
+          "food_court"
+        ],
         "category": "general",
         "image_url": ""
       }
@@ -1270,21 +1142,17 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-74.8502149, 11.0194305]
+        "coordinates": [
+          -74.8502149,
+          11.0194305
+        ]
       },
       "properties": {
         "name": "Le' Salon Du Nord",
         "type": "Tipo por definir",
-        "description": "",
-        "opening_hours": "",
-        "contact_info": {
-          "phone": "",
-          "email": ""
-        },
+        "description": "This is a le' salon du nord.",
+        "opening_hours": "6:30 am - 8:30 pm.",
         "tags": [],
-        "level": null,
-        "accessibility": "unknown",
-        "last_updated": "",
         "category": "general",
         "image_url": ""
       }
@@ -1293,21 +1161,19 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-74.8503937, 11.0196274]
+        "coordinates": [
+          -74.8503937,
+          11.0196274
+        ]
       },
       "properties": {
-        "name": null,
+        "name": "Fast_food",
         "type": "Tipo por definir",
-        "description": "",
-        "opening_hours": "",
-        "contact_info": {
-          "phone": "",
-          "email": ""
-        },
-        "tags": ["fast_food"],
-        "level": null,
-        "accessibility": "unknown",
-        "last_updated": "",
+        "description": "This is a fast_food.",
+        "opening_hours": "6:30 am - 8:30 pm.",
+        "tags": [
+          "fast_food"
+        ],
         "category": "general",
         "image_url": ""
       }
@@ -1316,21 +1182,19 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-74.8502996, 11.0195747]
+        "coordinates": [
+          -74.8502996,
+          11.0195747
+        ]
       },
       "properties": {
         "name": "Cibercafé Du Nord",
         "type": "Tipo por definir",
-        "description": "",
-        "opening_hours": "",
-        "contact_info": {
-          "phone": "",
-          "email": ""
-        },
-        "tags": ["internet_cafe"],
-        "level": null,
-        "accessibility": "unknown",
-        "last_updated": "",
+        "description": "This is a cibercafé du nord.",
+        "opening_hours": "6:30 am - 8:30 pm.",
+        "tags": [
+          "internet_cafe"
+        ],
         "category": "general",
         "image_url": ""
       }
@@ -1339,21 +1203,19 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-74.8502082, 11.019567]
+        "coordinates": [
+          -74.8502082,
+          11.019567
+        ]
       },
       "properties": {
-        "name": null,
+        "name": "Fast_food",
         "type": "Tipo por definir",
-        "description": "",
-        "opening_hours": "",
-        "contact_info": {
-          "phone": "",
-          "email": ""
-        },
-        "tags": ["fast_food"],
-        "level": null,
-        "accessibility": "unknown",
-        "last_updated": "",
+        "description": "This is a fast_food.",
+        "opening_hours": "6:30 am - 8:30 pm.",
+        "tags": [
+          "fast_food"
+        ],
         "category": "general",
         "image_url": ""
       }
@@ -1362,21 +1224,17 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-74.8499213, 11.0195362]
+        "coordinates": [
+          -74.8499213,
+          11.0195362
+        ]
       },
       "properties": {
         "name": "Estatua de Alvaro Jaramillo Vengoechea",
         "type": "Tipo por definir",
-        "description": "",
-        "opening_hours": "",
-        "contact_info": {
-          "phone": "",
-          "email": ""
-        },
+        "description": "This is a estatua de alvaro jaramillo vengoechea.",
+        "opening_hours": "6:30 am - 8:30 pm.",
         "tags": [],
-        "level": null,
-        "accessibility": "unknown",
-        "last_updated": "",
         "category": "general",
         "image_url": ""
       }
@@ -1385,21 +1243,19 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-74.8502599, 11.0196721]
+        "coordinates": [
+          -74.8502599,
+          11.0196721
+        ]
       },
       "properties": {
         "name": "Mediateca Café Du Nord",
         "type": "Tipo por definir",
-        "description": "",
-        "opening_hours": "",
-        "contact_info": {
-          "phone": "",
-          "email": ""
-        },
-        "tags": ["cinema"],
-        "level": null,
-        "accessibility": "unknown",
-        "last_updated": "",
+        "description": "This is a mediateca café du nord.",
+        "opening_hours": "6:30 am - 8:30 pm.",
+        "tags": [
+          "cinema"
+        ],
         "category": "general",
         "image_url": ""
       }
@@ -1408,21 +1264,19 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-74.8501466, 11.0198881]
+        "coordinates": [
+          -74.8501466,
+          11.0198881
+        ]
       },
       "properties": {
         "name": "Anfiteatro al Aire Libre",
         "type": "Tipo por definir",
-        "description": "",
-        "opening_hours": "",
-        "contact_info": {
-          "phone": "",
-          "email": ""
-        },
-        "tags": ["theatre"],
-        "level": null,
-        "accessibility": "unknown",
-        "last_updated": "",
+        "description": "This is a anfiteatro al aire libre.",
+        "opening_hours": "6:30 am - 8:30 pm.",
+        "tags": [
+          "theatre"
+        ],
         "category": "general",
         "image_url": ""
       }
@@ -1431,21 +1285,19 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-74.8512119, 11.0202219]
+        "coordinates": [
+          -74.8512119,
+          11.0202219
+        ]
       },
       "properties": {
         "name": "Centro de Escritura ECO",
         "type": "Tipo por definir",
-        "description": "",
-        "opening_hours": "",
-        "contact_info": {
-          "phone": "",
-          "email": ""
-        },
-        "tags": ["prep_school"],
-        "level": null,
-        "accessibility": "unknown",
-        "last_updated": "",
+        "description": "This is a centro de escritura eco.",
+        "opening_hours": "6:30 am - 8:30 pm.",
+        "tags": [
+          "prep_school"
+        ],
         "category": "general",
         "image_url": ""
       }
@@ -1454,21 +1306,19 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-74.851171, 11.0202756]
+        "coordinates": [
+          -74.851171,
+          11.0202756
+        ]
       },
       "properties": {
-        "name": null,
+        "name": "Baño",
         "type": "Tipo por definir",
-        "description": "",
-        "opening_hours": "",
-        "contact_info": {
-          "phone": "",
-          "email": ""
-        },
-        "tags": ["toilets"],
-        "level": null,
-        "accessibility": "unknown",
-        "last_updated": "",
+        "description": "This is a baño.",
+        "opening_hours": "6:30 am - 8:30 pm.",
+        "tags": [
+          "toilets"
+        ],
         "category": "general",
         "image_url": ""
       }
@@ -1477,21 +1327,19 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-74.8505953, 11.0201101]
+        "coordinates": [
+          -74.8505953,
+          11.0201101
+        ]
       },
       "properties": {
         "name": "Du Nord Terrace",
         "type": "Tipo por definir",
-        "description": "",
-        "opening_hours": "",
-        "contact_info": {
-          "phone": "",
-          "email": ""
-        },
-        "tags": ["restaurant"],
-        "level": null,
-        "accessibility": "unknown",
-        "last_updated": "",
+        "description": "This is a du nord terrace.",
+        "opening_hours": "6:30 am - 8:30 pm.",
+        "tags": [
+          "restaurant"
+        ],
         "category": "general",
         "image_url": ""
       }
@@ -1500,21 +1348,19 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-74.8505436, 11.0201479]
+        "coordinates": [
+          -74.8505436,
+          11.0201479
+        ]
       },
       "properties": {
-        "name": null,
+        "name": "Baño",
         "type": "Tipo por definir",
-        "description": "",
-        "opening_hours": "",
-        "contact_info": {
-          "phone": "",
-          "email": ""
-        },
-        "tags": ["toilets"],
-        "level": null,
-        "accessibility": "unknown",
-        "last_updated": "",
+        "description": "This is a baño.",
+        "opening_hours": "6:30 am - 8:30 pm.",
+        "tags": [
+          "toilets"
+        ],
         "category": "general",
         "image_url": ""
       }
@@ -1523,21 +1369,19 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-74.8510725, 11.0203991]
+        "coordinates": [
+          -74.8510725,
+          11.0203991
+        ]
       },
       "properties": {
         "name": "Le Petit Café",
         "type": "Tipo por definir",
-        "description": "",
-        "opening_hours": "",
-        "contact_info": {
-          "phone": "",
-          "email": ""
-        },
-        "tags": ["cafe"],
-        "level": null,
-        "accessibility": "unknown",
-        "last_updated": "",
+        "description": "This is a le petit café.",
+        "opening_hours": "6:30 am - 8:30 pm.",
+        "tags": [
+          "cafe"
+        ],
         "category": "general",
         "image_url": ""
       }
@@ -1546,21 +1390,17 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-74.8504626, 11.020083]
+        "coordinates": [
+          -74.8504626,
+          11.020083
+        ]
       },
       "properties": {
         "name": "Gimnasio Uninorte",
         "type": "Tipo por definir",
-        "description": "",
-        "opening_hours": "",
-        "contact_info": {
-          "phone": "",
-          "email": ""
-        },
+        "description": "This is a gimnasio uninorte.",
+        "opening_hours": "6:30 am - 8:30 pm.",
         "tags": [],
-        "level": null,
-        "accessibility": "unknown",
-        "last_updated": "",
         "category": "general",
         "image_url": ""
       }
@@ -1569,21 +1409,19 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-74.8502658, 11.0200724]
+        "coordinates": [
+          -74.8502658,
+          11.0200724
+        ]
       },
       "properties": {
-        "name": null,
+        "name": "Baño",
         "type": "Tipo por definir",
-        "description": "",
-        "opening_hours": "",
-        "contact_info": {
-          "phone": "",
-          "email": ""
-        },
-        "tags": ["toilets"],
-        "level": null,
-        "accessibility": "unknown",
-        "last_updated": "",
+        "description": "This is a baño.",
+        "opening_hours": "6:30 am - 8:30 pm.",
+        "tags": [
+          "toilets"
+        ],
         "category": "general",
         "image_url": ""
       }
@@ -1592,21 +1430,19 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-74.851601, 11.0208773]
+        "coordinates": [
+          -74.851601,
+          11.0208773
+        ]
       },
       "properties": {
-        "name": null,
+        "name": "Baño",
         "type": "Tipo por definir",
-        "description": "",
-        "opening_hours": "",
-        "contact_info": {
-          "phone": "",
-          "email": ""
-        },
-        "tags": ["toilets"],
-        "level": null,
-        "accessibility": "unknown",
-        "last_updated": "",
+        "description": "This is a baño.",
+        "opening_hours": "6:30 am - 8:30 pm.",
+        "tags": [
+          "toilets"
+        ],
         "category": "general",
         "image_url": ""
       }
@@ -1615,21 +1451,19 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-74.8516147, 11.0209468]
+        "coordinates": [
+          -74.8516147,
+          11.0209468
+        ]
       },
       "properties": {
         "name": "Restaurante Bocas de Ceniza",
         "type": "Tipo por definir",
-        "description": "",
-        "opening_hours": "",
-        "contact_info": {
-          "phone": "",
-          "email": ""
-        },
-        "tags": ["restaurant"],
-        "level": null,
-        "accessibility": "unknown",
-        "last_updated": "",
+        "description": "This is a restaurante bocas de ceniza.",
+        "opening_hours": "6:30 am - 8:30 pm.",
+        "tags": [
+          "restaurant"
+        ],
         "category": "general",
         "image_url": ""
       }
@@ -1638,21 +1472,17 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-74.8496333, 11.0197428]
+        "coordinates": [
+          -74.8496333,
+          11.0197428
+        ]
       },
       "properties": {
-        "name": null,
+        "name": "Unknown",
         "type": "Tipo por definir",
-        "description": "",
-        "opening_hours": "",
-        "contact_info": {
-          "phone": "",
-          "email": ""
-        },
+        "description": "This is a unknown.",
+        "opening_hours": "6:30 am - 8:30 pm.",
         "tags": [],
-        "level": null,
-        "accessibility": "unknown",
-        "last_updated": "",
         "category": "general",
         "image_url": ""
       }
@@ -1661,21 +1491,19 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-74.849627, 11.0197662]
+        "coordinates": [
+          -74.849627,
+          11.0197662
+        ]
       },
       "properties": {
         "name": "Cajero Bancolombia",
         "type": "Tipo por definir",
-        "description": "",
-        "opening_hours": "",
-        "contact_info": {
-          "phone": "",
-          "email": ""
-        },
-        "tags": ["atm"],
-        "level": null,
-        "accessibility": "unknown",
-        "last_updated": "",
+        "description": "This is a cajero bancolombia.",
+        "opening_hours": "6:30 am - 8:30 pm.",
+        "tags": [
+          "atm"
+        ],
         "category": "general",
         "image_url": ""
       }
@@ -1684,21 +1512,19 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-74.8495022, 11.019732]
+        "coordinates": [
+          -74.8495022,
+          11.019732
+        ]
       },
       "properties": {
-        "name": null,
+        "name": "Vending_machine",
         "type": "Tipo por definir",
-        "description": "",
-        "opening_hours": "",
-        "contact_info": {
-          "phone": "",
-          "email": ""
-        },
-        "tags": ["vending_machine"],
-        "level": null,
-        "accessibility": "unknown",
-        "last_updated": "",
+        "description": "This is a vending_machine.",
+        "opening_hours": "6:30 am - 8:30 pm.",
+        "tags": [
+          "vending_machine"
+        ],
         "category": "general",
         "image_url": ""
       }
@@ -1707,21 +1533,19 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-74.8483835, 11.0197226]
+        "coordinates": [
+          -74.8483835,
+          11.0197226
+        ]
       },
       "properties": {
         "name": "Laboratorio de Produccion y Composición Musical",
         "type": "Tipo por definir",
-        "description": "",
-        "opening_hours": "",
-        "contact_info": {
-          "phone": "",
-          "email": ""
-        },
-        "tags": ["music_school"],
-        "level": null,
-        "accessibility": "unknown",
-        "last_updated": "",
+        "description": "This is a laboratorio de produccion y composición musical.",
+        "opening_hours": "6:30 am - 8:30 pm.",
+        "tags": [
+          "music_school"
+        ],
         "category": "general",
         "image_url": ""
       }
@@ -1730,21 +1554,19 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-74.8481252, 11.0197179]
+        "coordinates": [
+          -74.8481252,
+          11.0197179
+        ]
       },
       "properties": {
         "name": "Bienestar Universitario",
         "type": "Tipo por definir",
-        "description": "",
-        "opening_hours": "",
-        "contact_info": {
-          "phone": "",
-          "email": ""
-        },
-        "tags": ["social_facility"],
-        "level": null,
-        "accessibility": "unknown",
-        "last_updated": "",
+        "description": "This is a bienestar universitario.",
+        "opening_hours": "6:30 am - 8:30 pm.",
+        "tags": [
+          "social_facility"
+        ],
         "category": "general",
         "image_url": ""
       }
@@ -1753,21 +1575,19 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-74.8477302, 11.019605]
+        "coordinates": [
+          -74.8477302,
+          11.019605
+        ]
       },
       "properties": {
-        "name": null,
+        "name": "Baño",
         "type": "Tipo por definir",
-        "description": "",
-        "opening_hours": "",
-        "contact_info": {
-          "phone": "",
-          "email": ""
-        },
-        "tags": ["toilets"],
-        "level": null,
-        "accessibility": "unknown",
-        "last_updated": "",
+        "description": "This is a baño.",
+        "opening_hours": "6:30 am - 8:30 pm.",
+        "tags": [
+          "toilets"
+        ],
         "category": "general",
         "image_url": ""
       }
@@ -1776,21 +1596,19 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-74.8477256, 11.019661]
+        "coordinates": [
+          -74.8477256,
+          11.019661
+        ]
       },
       "properties": {
         "name": "Dispensador de agua",
         "type": "Tipo por definir",
-        "description": "",
-        "opening_hours": "",
-        "contact_info": {
-          "phone": "",
-          "email": ""
-        },
-        "tags": ["drinking_water"],
-        "level": null,
-        "accessibility": "unknown",
-        "last_updated": "",
+        "description": "This is a dispensador de agua.",
+        "opening_hours": "6:30 am - 8:30 pm.",
+        "tags": [
+          "drinking_water"
+        ],
         "category": "general",
         "image_url": ""
       }
