@@ -1,6 +1,3 @@
-import 'dart:io';
-
-import 'package:flutter/material.dart';
 import 'package:flutter_mapa/domain/models/POIs/point_of_interest.dart';
 import 'package:flutter_mapa/domain/repositories/i_pois_repository.dart';
 import 'package:flutter_mapa/infraestructure/local/local_poi.dart';

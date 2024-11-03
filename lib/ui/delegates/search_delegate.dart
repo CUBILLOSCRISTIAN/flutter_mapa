@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_mapa/domain/models/POIs/point_of_interest.dart';
+import 'package:flutter_mapa/ui/widgets/search_item_poi.dart';
 
 // Esto es un contrato que se va a cumplir en el widget que se va a implementar
 // Cualquier funcion que cumpla con este contrato puede ser utilizada en el widget
@@ -76,7 +77,7 @@ class SearchDelegateClass extends SearchDelegate {
         itemCount: poisVisited.length,
         itemBuilder: (context, index) {
           final PointOfInterest poi = poisVisited[index];
-          return CardItemSearch(
+          return SearchItemPOI(
             poi: poi,
           );
         },
@@ -99,7 +100,7 @@ class SearchDelegateClass extends SearchDelegate {
               itemCount: pois.length,
               itemBuilder: (context, index) {
                 final PointOfInterest poi = pois[index];
-                return CardItemSearch(
+                return SearchItemPOI(
                   poi: poi,
                 );
               },
@@ -113,36 +114,3 @@ class SearchDelegateClass extends SearchDelegate {
   }
 }
 
-class CardItemSearch extends StatelessWidget {
-  final PointOfInterest poi;
-
-  const CardItemSearch({
-    super.key,
-    required this.poi,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Card(
-      margin: const EdgeInsets.symmetric(vertical: 10, horizontal: 15),
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(15),
-      ),
-      elevation: 5,
-      child: ListTile(
-        leading: Icon(Icons.place, color: Theme.of(context).primaryColor),
-        title: Text(
-          poi.name,
-          style: TextStyle(
-            fontSize: 18,
-            fontWeight: FontWeight.bold,
-          ),
-        ),
-        subtitle: Text(poi.description),
-        onTap: () {
-          poisVisited.add(poi);
-        },
-      ),
-    );
-  }
-}
