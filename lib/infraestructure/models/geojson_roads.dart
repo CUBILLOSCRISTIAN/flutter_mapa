@@ -117,6 +117,7 @@ class Geometry {
 }
 
 enum GeometryType {
+    // ignore: constant_identifier_names
     LINE_STRING
 }
 

@@ -9,9 +9,7 @@ import 'package:flutter_mapa/ui/widgets/search_item_poi.dart';
 // Cualquier funcion que cumpla con este contrato puede ser utilizada en el widget
 typedef SearchPOICallback = Future<List<PointOfInterest>> Function(String text);
 
-List<PointOfInterest> poisVisited = [];
-
-class SearchDelegateClass extends SearchDelegate {
+class SearchDelegateClass extends SearchDelegate<PointOfInterest?> {
   final SearchPOICallback searchPOI;
 
   //Para no hacer peticiones cada que user escriba
@@ -42,9 +40,8 @@ class SearchDelegateClass extends SearchDelegate {
   }
 
   @override
-  String get searchFieldLabel => 'Buscar un lugar de la U';
+  String get searchFieldLabel => 'Busca un lugar de la U';
 
-  //
   @override
   List<Widget>? buildActions(BuildContext context) {
     return [
@@ -72,17 +69,7 @@ class SearchDelegateClass extends SearchDelegate {
   //Sugerencias que aparecen cuando la persona escribe
   @override
   Widget buildResults(BuildContext context) {
-    return Builder(builder: (context) {
-      return ListView.builder(
-        itemCount: poisVisited.length,
-        itemBuilder: (context, index) {
-          final PointOfInterest poi = poisVisited[index];
-          return SearchItemPOI(
-            poi: poi,
-          );
-        },
-      );
-    });
+   return  Text('Realiazando peticion');
   }
 
   //Sugerencias que aparecen
@@ -102,6 +89,7 @@ class SearchDelegateClass extends SearchDelegate {
                 final PointOfInterest poi = pois[index];
                 return SearchItemPOI(
                   poi: poi,
+                  onSelected: close,
                 );
               },
             );
@@ -113,4 +101,3 @@ class SearchDelegateClass extends SearchDelegate {
         });
   }
 }
-

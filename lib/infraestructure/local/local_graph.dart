@@ -14,7 +14,6 @@ abstract class ILocalRoute {
   Future<Graph> createGraph(GeoJsonRoads geoJsonData);
 }
 
-
 class LocalGraph implements ILocalRoute {
   Graph? _graph;
 
@@ -46,47 +45,69 @@ class LocalGraph implements ILocalRoute {
 
     if (geoJsonData.features != null) {
       for (var feature in geoJsonData.features!) {
-      if (feature.geometry!.type == GeometryType.LINE_STRING) {
-        List<List<double>> coordinates = feature.geometry!.coordinates!;
+        if (feature.geometry!.type == GeometryType.LINE_STRING) {
+          List<List<double>> coordinates = feature.geometry!.coordinates!;
 
-        for (int i = 0; i < coordinates.length - 1; i++) {
-          var startCoord = LatLng(coordinates[i][1], coordinates[i][0]);
-          var endCoord = LatLng(coordinates[i + 1][1], coordinates[i + 1][0]);
+          for (int i = 0; i < coordinates.length - 1; i++) {
+            var startCoord = LatLng(coordinates[i][1], coordinates[i][0]);
+            var endCoord = LatLng(coordinates[i + 1][1], coordinates[i + 1][0]);
 
-          var startKey = startCoord.toString();
-          var endKey = endCoord.toString();
+            var startKey = startCoord.toString();
+            var endKey = endCoord.toString();
 
-          if (!nodes.containsKey(startKey)) {
-            nodes[startKey] = Node(startCoord, []);
+            if (!nodes.containsKey(startKey)) {
+              nodes[startKey] = Node(startCoord, []);
+            }
+            if (!nodes.containsKey(endKey)) {
+              nodes[endKey] = Node(endCoord, []);
+            }
+
+            var edge = Edge(nodes[endKey]!, 1.0); // Peso arbitrario
+            nodes[startKey]?.neighbors.add(edge);
           }
-          if (!nodes.containsKey(endKey)) {
-            nodes[endKey] = Node(endCoord, []);
-          }
-
-          var edge = Edge(nodes[endKey]!, 1.0); // Peso arbitrario
-          nodes[startKey]?.neighbors.add(edge);
         }
-      }
       }
     }
     return Graph(nodes);
-    
   }
 
-  List<Node> aStar(LatLng startCoord, LatLng goalCoord, Map<String, Node> nodes) {
-      debugPrint("A*");
-      debugPrint("Start: $startCoord");
-      debugPrint("Goal: $goalCoord");
-      debugPrint('Node Start: ${nodes[startCoord.toString()]}');
+  Node findNearestNode(LatLng point, Map<String, Node> nodes) {
+    Node? nearestNode;
+    double shortestDistance = double.infinity;
+    final distanceCalculator = Distance();
 
-    final start = nodes[startCoord.toString()]!;
-    final goal = nodes[goalCoord.toString()]!;
+    for (var node in nodes.values) {
+      double distance =
+          distanceCalculator.as(LengthUnit.Meter, point, node.coordinates);
+
+      if (distance < shortestDistance) {
+        shortestDistance = distance;
+        nearestNode = node;
+      }
+    }
+
+    print(nearestNode?.coordinates.latitude);
+
+    return nearestNode!;
+  }
+
+  List<Node> aStar(
+      LatLng startCoord, LatLng goalCoord, Map<String, Node> nodes) {
+    debugPrint("A*");
+    debugPrint("Start: $startCoord");
+    debugPrint("Goal: $goalCoord");
+    debugPrint('Node Start: ${nodes[startCoord.toString()]}');
+
+    //Acercar los puntos startCoord y goalCoord a un punto mas cercano del grafo
+    var start =
+        nodes[startCoord.toString()] ?? findNearestNode(startCoord, nodes);
+    var goal = nodes[goalCoord.toString()] ?? findNearestNode(goalCoord, nodes);
+
     final openSet = <Node>{start};
     final cameFrom = <Node, Node>{};
 
     final gScore = <Node, double>{};
 
-    
     for (var node in nodes.values) {
       gScore[node] = double.infinity;
     }
@@ -149,7 +170,6 @@ class LocalGraph implements ILocalRoute {
     final dy = startCoords.longitude - endCoords.longitude;
 
     return sqrt(dx * dx + dy * dy);
-
   }
 
   List<Node> _reconstructPath(Map<Node, Node> cameFrom, Node current) {

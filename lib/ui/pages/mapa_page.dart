@@ -27,42 +27,57 @@ class _MapaPageState extends State<MapaPage> {
   List<LatLng> markersList = [];
 
   //Lista de puntos para el camino más corto
-  List<dynamic> listOfPointsOfPath = [];
+  List<domain.Node> listOfPointsOfPath = [];
+  List pointsOfPath = [];
   List<LatLng> path = [];
   PoisController poisController = Get.find();
 
   @override
   void initState() {
     super.initState();
-    _loadPOIs();
+    // _loadPOIs();
   }
 
-  Future<void> _loadPOIs() async {
-    List<PointOfInterest> pois = poisController.poiList;
-    for (var element in pois) {
-      listOfPOIs.add(LatLng(element.latitude, element.longitude));
-    }
-    setState(() {
-      markersList = List<LatLng>.from(listOfPOIs);
-    });
-  }
+  //
 
   @override
   Widget build(BuildContext context) {
     LocationController ubicacionController = Get.find();
-    
+    GraphController graphController = Get.find();
+
+    Future<void> _loadPOIs(poi) async {
+      listOfPOIs.clear();
+      listOfPOIs.add(LatLng(poi.latitude, poi.longitude));
+      listOfPointsOfPath = graphController.findShortestPath(
+          ubicacionController.ubicacion.value, LatLng(poi.latitude, poi.longitude));
+      listOfPointsOfPath.forEach((element) {
+        pointsOfPath.add(LatLng( 
+            element.coordinates.latitude, element.coordinates.longitude));
+      });
+     
+
+      setState(() { 
+        path =  List<LatLng>.from(pointsOfPath);
+        markersList = List<LatLng>.from(listOfPOIs);
+      });
+    }
 
     return Scaffold(
       body: Center(
         child: Obx(() => _crearMapa(ubicacionController)),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () async {
-          showSearch(
-              context: context,
-              delegate: SearchDelegateClass(
-                searchPOI: poisController.searchPOIs,
-              ));
+        onPressed: () {
+          showSearch<PointOfInterest?>(
+            context: context,
+            delegate: SearchDelegateClass(
+              searchPOI: poisController.searchPOIs,
+            ),
+          ).then((poi) {
+            if (poi != null) {
+              _loadPOIs(poi);
+            }
+          });
         },
         child: const Icon(Icons.search_outlined),
       ),
@@ -110,19 +125,19 @@ class _MapaPageState extends State<MapaPage> {
           ),
           moveAnimationDuration: Duration.zero,
         ),
-        // MarkerLayer(markers: [
-        //   for (var point in markersList)
-        //     Marker(
-        //       width: 40.0,
-        //       height: 40.0,
-        //       point: point,
-        //       child: const Icon(
-        //         Icons.location_on,
-        //         size: 30.0,
-        //         color: Colors.red,
-        //       ),
-        //     ),
-        // ]),
+        MarkerLayer(markers: [
+          for (var point in markersList)
+            Marker(
+              width: 40.0,
+              height: 40.0,
+              point: point,
+              child: const Icon(
+                Icons.location_on,
+                size: 30.0,
+                color: Colors.red,
+              ),
+            ),
+        ]),
         PolylineLayer(
           polylines: [
             Polyline(

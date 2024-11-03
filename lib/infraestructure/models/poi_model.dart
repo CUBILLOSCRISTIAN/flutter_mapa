@@ -12,7 +12,6 @@ class PointOfInterestModel extends PointOfInterest {
 
   factory PointOfInterestModel.fromJson(Map<String, dynamic> json) {
     // final feature = json['feature'] ?? {};
-    print(json);
     final properties = json['properties'] ?? {};
     final geometry = json['geometry'] ?? {};
 
