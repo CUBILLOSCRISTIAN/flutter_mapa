@@ -1,10 +1,10 @@
 
+import 'package:flutter_mapa/infraestructure/local/local_graph.dart';
 import 'package:flutter_mapa/infraestructure/models/geojson_roads.dart';
 import 'package:flutter_mapa/domain/models/Graph/graph.dart';
 import 'package:flutter_mapa/domain/models/Graph/node.dart';
 
 import 'package:flutter_mapa/domain/repositories/i_graph_repository.dart';
-import 'package:flutter_mapa/infraestructure/local/i_local_graph.dart';
 import 'package:flutter_mapa/infraestructure/utils/load_geojson.dart';
 import 'package:latlong2/latlong.dart';
 

@@ -7,7 +7,7 @@ class PoiUseCase {
 
   PoiUseCase(this._poiRepository);
 
-  Future<List<PointOfInterest>> getPoiList() async {
+  List<PointOfInterest> getPoiList()  {
     return _poiRepository.getPOIs();
   }
 

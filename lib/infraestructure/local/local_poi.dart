@@ -1,33 +1,31 @@
 import 'package:flutter_mapa/domain/models/POIs/point_of_interest.dart';
-import 'package:flutter_mapa/infraestructure/mappers/point_of_interest_mapper.dart';
-import 'package:flutter_mapa/infraestructure/models/geojson_pois.dart';
-import 'package:flutter_mapa/infraestructure/local/i_local_pois.dart';
 
-class LocalPOI implements ILocalPOIs{
+import 'package:flutter_mapa/infraestructure/models/poi_model.dart';
 
+//Clase abstracta
 
+abstract class AbstractLocalPOIs {
+  void fetchPOIs(Map<String, dynamic> poi);
+  List<PointOfInterest> getPOIs();
+}
+
+class LocalPOI implements AbstractLocalPOIs {
   List<PointOfInterest>? _POIs;
 
   @override
-  void fetchPOIs(GeoJsonPOIs geojson_pois) {
-    // TODO: implement createPOIs
+  void fetchPOIs(Map<String, dynamic> geojsonPois) {
 
-    //Recibo un GEOJSON lo mapeo a un objeto Pois
-    _POIs = PointOfInterestMapper.fromGeoJson(geojson_pois);
-
-    for (var poi in _POIs!) {
-      print(poi.name);
-    }
+    _POIs = geojsonPois['features']
+        .map<PointOfInterest>((poi) => PointOfInterestModel.fromJson(poi))
+        .toList();
   }
 
   @override
-  Future<List<PointOfInterest>> getPOIs() {
+  List<PointOfInterest> getPOIs() {
+    //* Verifico si _POIs es nulo, si es nulo retorno una lista vacía
     if (_POIs == null) {
-      throw Exception("POIs not loaded");
+      [];
     }
-    return Future.value(_POIs!);
+    return _POIs!;
   }
-
-
-
 }

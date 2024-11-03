@@ -21,7 +21,7 @@ class GraphController extends GetxController {
     await _graphUseCase.createGraph();
   }
 
-  List<domain.Node> findShortestPath() {
+  List<domain.Node> findShortestPath(LatLng? start, LatLng? end) {
     const start = LatLng(
                         11.0194067,-74.849615);
     const end = LatLng(11.0196014, -74.8488317);
