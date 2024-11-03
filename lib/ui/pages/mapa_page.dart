@@ -47,17 +47,21 @@ class _MapaPageState extends State<MapaPage> {
 
     Future<void> _loadPOIs(poi) async {
       listOfPOIs.clear();
+      pointsOfPath.clear();
+      path.clear();
+      listOfPointsOfPath.clear();
+
       listOfPOIs.add(LatLng(poi.latitude, poi.longitude));
       listOfPointsOfPath = graphController.findShortestPath(
-          ubicacionController.ubicacion.value, LatLng(poi.latitude, poi.longitude));
+          ubicacionController.ubicacion.value,
+          LatLng(poi.latitude, poi.longitude));
       listOfPointsOfPath.forEach((element) {
-        pointsOfPath.add(LatLng( 
+        pointsOfPath.add(LatLng(
             element.coordinates.latitude, element.coordinates.longitude));
       });
-     
 
-      setState(() { 
-        path =  List<LatLng>.from(pointsOfPath);
+      setState(() {
+        path = List<LatLng>.from(pointsOfPath);
         markersList = List<LatLng>.from(listOfPOIs);
       });
     }
