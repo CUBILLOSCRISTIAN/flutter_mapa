@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_mapa/ui/controllers/graph_controller.dart';
 import 'package:flutter_mapa/ui/controllers/pois_controller.dart';
-import 'package:flutter_mapa/domain/repositories/i_graph_repository.dart';
+import 'package:flutter_mapa/feature/graph/domain/repositories/i_graph_repository.dart';
 import 'package:flutter_mapa/domain/repositories/i_pois_repository.dart';
-import 'package:flutter_mapa/domain/usecase/graph_use_case.dart';
+import 'package:flutter_mapa/feature/graph/domain/usecases/graph_use_case.dart';
 import 'package:flutter_mapa/domain/usecase/poi_use_case.dart';
-import 'package:flutter_mapa/infraestructure/local/local_graph.dart';
+import 'package:flutter_mapa/feature/graph/data/sources/local/local_graph.dart';
 import 'package:flutter_mapa/infraestructure/local/local_poi.dart';
-import 'package:flutter_mapa/infraestructure/repositories/graph_repository_impl.dart';
+import 'package:flutter_mapa/feature/graph/data/repositories/graph_repository_impl.dart';
 import 'package:flutter_mapa/infraestructure/repositories/poi_repository_impl.dart';
 import 'package:flutter_mapa/ui/pages/acceso_gps_page.dart';
 import 'package:flutter_mapa/ui/pages/loading_page.dart';

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_map/flutter_map.dart';
 import 'package:flutter_map_location_marker/flutter_map_location_marker.dart';
 
-import 'package:flutter_mapa/domain/models/Graph/node.dart' as domain;
+import 'package:flutter_mapa/feature/graph/domain/entitites/node.dart' as domain;
 import 'package:flutter_mapa/domain/models/POIs/point_of_interest.dart';
 import 'package:flutter_mapa/ui/controllers/graph_controller.dart';
 import 'package:flutter_mapa/ui/controllers/pois_controller.dart';
@@ -37,8 +37,6 @@ class _MapaPageState extends State<MapaPage> {
     super.initState();
     // _loadPOIs();
   }
-
-  //
 
   @override
   Widget build(BuildContext context) {

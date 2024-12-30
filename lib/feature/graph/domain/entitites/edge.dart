@@ -1,4 +1,4 @@
-import 'package:flutter_mapa/domain/models/Graph/node.dart';
+import 'package:flutter_mapa/feature/graph/domain/entitites/node.dart';
 
 class Edge {
   final Node destination;

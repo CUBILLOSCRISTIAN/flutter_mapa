@@ -1,12 +1,3 @@
-// To parse this JSON data, do
-//
-//     final geoJson = geoJsonFromJson(jsonString);
-
-import 'dart:convert';
-
-GeoJsonRoads geoJsonFromJson(String str) => GeoJsonRoads.fromJson(json.decode(str));
-
-String geoJsonToJson(GeoJsonRoads data) => json.encode(data.toJson());
 
 class GeoJsonRoads {
     final String? type;

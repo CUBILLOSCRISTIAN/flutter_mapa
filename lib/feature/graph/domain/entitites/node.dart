@@ -1,8 +1,8 @@
-import 'package:flutter_mapa/domain/models/Graph/edge.dart';
+import 'package:flutter_mapa/feature/graph/domain/entitites/edge.dart';
 import 'package:latlong2/latlong.dart';
 
 class Node {
-  final LatLng coordinates; // LatLng from latlong2 library
+  final LatLng coordinates;
   final List<Edge> neighbors;
 
   Node(this.coordinates, this.neighbors);

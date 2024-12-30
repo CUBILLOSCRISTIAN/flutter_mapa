@@ -1,11 +1,12 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_mapa/domain/models/Graph/edge.dart';
-import 'package:flutter_mapa/infraestructure/models/geojson_roads.dart';
-import 'package:flutter_mapa/domain/models/Graph/graph.dart';
-import 'package:flutter_mapa/domain/models/Graph/node.dart';
 import 'package:latlong2/latlong.dart';
+
+import '../../../../../infraestructure/models/geojson_roads.dart';
+import '../../../domain/entitites/edge.dart';
+import '../../../domain/entitites/graph.dart';
+import '../../../domain/entitites/node.dart';
 
 abstract class ILocalRoute {
   Future<void> saveGraph(Graph graph);
