@@ -1,13 +1,11 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_map/flutter_map.dart';
-import 'package:flutter_map_location_marker/flutter_map_location_marker.dart';
-
-import 'package:flutter_mapa/feature/graph/domain/entitites/node.dart' as domain;
-import 'package:flutter_mapa/domain/models/POIs/point_of_interest.dart';
-import 'package:flutter_mapa/ui/controllers/graph_controller.dart';
-import 'package:flutter_mapa/ui/controllers/pois_controller.dart';
+import 'package:flutter_mapa/core/service/calculate_route.dart'
+    show calculateRoute;
 import 'package:flutter_mapa/ui/controllers/ubicacion_controller.dart';
-import 'package:flutter_mapa/ui/delegates/search_delegate.dart';
+import 'package:flutter_mapa/ui/widgets/card_info_main.dart';
 import 'package:get/get.dart';
 import 'package:latlong2/latlong.dart';
 
@@ -22,64 +20,92 @@ class MapaPage extends StatefulWidget {
 }
 
 class _MapaPageState extends State<MapaPage> {
-  //Lista de puntos para los POIs
-  List listOfPOIs = [];
-  List<LatLng> markersList = [];
-
-  //Lista de puntos para el camino más corto
-  List<domain.Node> listOfPointsOfPath = [];
-  List pointsOfPath = [];
-  List<LatLng> path = [];
-  PoisController poisController = Get.find();
-
   @override
   void initState() {
     super.initState();
-    // _loadPOIs();
   }
 
   @override
   Widget build(BuildContext context) {
     LocationController ubicacionController = Get.find();
-    GraphController graphController = Get.find();
+    // GraphController graphController = Get.find();
 
-    Future<void> _loadPOIs(poi) async {
-      listOfPOIs.clear();
-      pointsOfPath.clear();
-      path.clear();
-      listOfPointsOfPath.clear();
+    // Future<void> _loadPOIs(poi) async {
+    //   listOfPOIs.clear();
+    //   pointsOfPath.clear();
+    //   path.clear();
+    //   listOfPointsOfPath.clear();
 
-      listOfPOIs.add(LatLng(poi.latitude, poi.longitude));
-      listOfPointsOfPath = graphController.findShortestPath(
-          ubicacionController.ubicacion.value,
-          LatLng(poi.latitude, poi.longitude));
-      listOfPointsOfPath.forEach((element) {
-        pointsOfPath.add(LatLng(
-            element.coordinates.latitude, element.coordinates.longitude));
-      });
+    //   listOfPOIs.add(LatLng(poi.latitude, poi.longitude));
+    //   listOfPointsOfPath = graphController.findShortestPath(
+    //       ubicacionController.ubicacion.value,
+    //       LatLng(poi.latitude, poi.longitude));
+    //   listOfPointsOfPath.forEach((element) {
+    //     pointsOfPath.add(LatLng(
+    //         element.coordinates.latitude, element.coordinates.longitude));
+    //   });
 
-      setState(() {
-        path = List<LatLng>.from(pointsOfPath);
-        markersList = List<LatLng>.from(listOfPOIs);
-      });
-    }
+    //   setState(() {
+    //     path = List<LatLng>.from(pointsOfPath);
+    //     markersList = List<LatLng>.from(listOfPOIs);
+    //   });
+    // }
 
     return Scaffold(
-      body: Center(
-        child: Obx(() => _crearMapa(ubicacionController)),
+      appBar: AppBar(
+        title: const Text('Mapa Page'),
+      ),
+      body: Stack(
+        children: [
+          Positioned(
+            child: Obx(() => _crearMapa(ubicacionController)),
+          ),
+          Positioned(
+            bottom: context.height * 0.05,
+            left: 0,
+            right: 0,
+            child: Container(
+              height: context.height * 0.3,
+              decoration: BoxDecoration(
+                gradient: LinearGradient(
+                  begin: Alignment.centerLeft,
+                  end: Alignment.centerRight,
+                  colors: [
+                    Colors.black.withOpacity(0.8),
+                    Colors.black,
+                    Colors.black,
+                    Colors.black.withOpacity(0.8),
+                  ],
+                  stops: [0.0, 0.1, 0.9, 1.0],
+                ),
+              ),
+            ),
+          ),
+          Positioned(
+            bottom: context.height * 0.05,
+            left: 0 + 10,
+            right: 0,
+            child: SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Row(
+                children: [
+                  CardInfoMain(),
+                  SizedBox(width: 10),
+                  CardInfoMain(),
+                  SizedBox(width: 10),
+                  CardInfoMain(),
+                ],
+              ),
+            ),
+          ),
+        ],
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          showSearch<PointOfInterest?>(
-            context: context,
-            delegate: SearchDelegateClass(
-              searchPOI: poisController.searchPOIs,
-            ),
-          ).then((poi) {
-            if (poi != null) {
-              _loadPOIs(poi);
-            }
-          });
+          calculateRoute(
+            LatLng(-74.851285258320004, 11.02109875295),
+            LatLng(-74.851285300064646, 11.02109875300742),
+          );
         },
         child: const Icon(Icons.search_outlined),
       ),
@@ -111,47 +137,18 @@ class _MapaPageState extends State<MapaPage> {
           userAgentPackageName: 'com.example.app',
           maxZoom: 19,
         ),
-        CurrentLocationLayer(
-          style: LocationMarkerStyle(
-            marker: const DefaultLocationMarker(
-              color: Colors.green,
-              child: Icon(
-                Icons.person,
-                color: Colors.white,
-              ),
-            ),
-            markerSize: const Size.square(40),
-            accuracyCircleColor: Colors.green.withOpacity(0.1),
-            headingSectorColor: Colors.green.withOpacity(0.8),
-            headingSectorRadius: 120,
-          ),
-          moveAnimationDuration: Duration.zero,
-        ),
         MarkerLayer(markers: [
-          for (var point in markersList)
-            Marker(
-              width: 40.0,
-              height: 40.0,
-              point: point,
-              child: const Icon(
-                Icons.location_on,
-                size: 30.0,
-                color: Colors.red,
-              ),
+          Marker(
+            width: 40.0,
+            height: 40.0,
+            point: LatLng(ubicacion.latitude, ubicacion.longitude),
+            child: const Icon(
+              Icons.person,
+              size: 30.0,
+              color: Colors.red,
             ),
+          ),
         ]),
-        PolylineLayer(
-          polylines: [
-            Polyline(
-              points: path,
-              strokeWidth: 4,
-              color: Colors.deepPurple[600]!,
-            ),
-          ],
-        ),
-        const SimpleAttributionWidget(
-          source: Text('OpenStreetMap contributors'),
-        ),
       ],
     );
   }

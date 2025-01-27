@@ -1,0 +1,66 @@
+[
+  {
+    "id": 1,
+    "nombre": "Diversidad BioCultural",
+    "descripcion": "Un recorrido para explorar la riqueza biológica y cultural del ecocampus, aprendiendo sobre especies endémicas y su relación con las comunidades locales.",
+    "imagen": "https://example.com/image1.jpg",
+    "duracion": "2",
+    "dificultad": "Baja"
+  },
+  {
+    "id": 2,
+    "nombre": "La Ruta de Weirick",
+    "descripcion": "Descubre la historia de la fauna y flora que inspiraron al naturalista Weirick, mientras recorres senderos llenos de vida y naturaleza.",
+    "imagen": "https://example.com/image2.jpg",
+    "duracion": "1.5",
+    "dificultad": "Media"
+  },
+  {
+    "id": 3,
+    "nombre": "Entre la Fauna y la Flora",
+    "descripcion": "Un recorrido inmersivo que te acerca a los diferentes ecosistemas del campus, donde podrás observar animales y plantas de gran interés ecológico.",
+    "imagen": "https://example.com/image3.jpg",
+    "duracion": "3",
+    "dificultad": "Alta"
+  },
+  {
+    "id": 4,
+    "nombre": "Servicios de los Ecosistemas",
+    "descripcion": "Conoce los servicios ecológicos que brindan los diferentes ecosistemas del campus, incluyendo la purificación del aire, la captura de carbono y la conservación del agua.",
+    "imagen": "https://example.com/image4.jpg",
+    "duracion": 2,
+    "dificultad": "Baja"
+  },
+  {
+    "id": 5,
+    "nombre": "Especies Nativas y Exóticas",
+    "descripcion": "Un recorrido para conocer las especies nativas que habitan el campus y cómo las especies exóticas han impactado en el ecosistema.",
+    "imagen": "https://example.com/image5.jpg",
+    "duracion": 2.5,
+    "dificultad": "Media"
+  },
+  {
+    "id": 6,
+    "nombre": "Ecología Urbana",
+    "descripcion": "Explora la intersección entre la naturaleza y las ciudades, aprendiendo cómo la ecología urbana puede mejorar la calidad de vida de las personas.",
+    "imagen": "https://example.com/image6.jpg",
+    "duracion": 2,
+    "dificultad": "Baja"
+  },
+  {
+    "id": 7,
+    "nombre": "Bosque Seco Tropical",
+    "descripcion": "Sumérgete en un ecosistema único de bosque seco tropical, observando sus especies adaptadas a la escasez de agua y su papel en la biodiversidad del campus.",
+    "imagen": "https://example.com/image7.jpg",
+    "duracion": 3,
+    "dificultad": "Alta"
+  },
+  {
+    "id": 8,
+    "nombre": "Laboratorios Vivos",
+    "descripcion": "Un recorrido educativo por los 'laboratorios vivos' del campus, donde podrás interactuar con proyectos de investigación ecológica y sostenibilidad.",
+    "imagen": "https://example.com/image8.jpg",
+    "duracion": 1,
+    "dificultad": "Media"
+  }
+]
