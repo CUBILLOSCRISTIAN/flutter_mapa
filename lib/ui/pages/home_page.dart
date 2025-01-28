@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
+import 'package:flutter_mapa/ui/pages/detail_route.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -53,9 +53,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
             ],
           ),
           CircleAvatar(
-            radius: size.width * 0.06,
-            backgroundImage: AssetImage(
-                'assets/avatar.jpg'), // Replace with your image asset
+            radius: size.width * 0.06, // Replace with your image asset
           ),
         ],
       ),
@@ -80,7 +78,7 @@ class CustomCarrusel extends StatelessWidget {
       child: Container(
         margin: EdgeInsets.symmetric(vertical: 10),
         child: Row(
-          children: List.generate(5, (index) {
+          children: List.generate(3, (index) {
             return Container(
               width: size.width * 0.85,
               margin: EdgeInsets.symmetric(horizontal: 10),
@@ -103,11 +101,24 @@ class CustomCarrusel extends StatelessWidget {
                     padding: EdgeInsets.all(16),
                     child: ClipRRect(
                       borderRadius: BorderRadius.all(Radius.circular(15)),
-                      child: Image.network(
-                        'https://cdn.pixabay.com/photo/2014/07/30/22/53/notebook-405755_1280.jpg',
-                        height: size.width * 0.9,
-                        width: double.infinity,
-                        fit: BoxFit.cover,
+                      child: InkWell(
+                        onTap: () => Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => DetailRoute(
+                              tag: index,
+                            ),
+                          ),
+                        ),
+                        child: Hero(
+                          tag: index,
+                          child: Image.network(
+                            'https://plus.unsplash.com/premium_photo-1700143162587-5c09d6e3eece?q=80&w=2875&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+                            height: size.width * 0.9,
+                            width: double.infinity,
+                            fit: BoxFit.cover,
+                          ),
+                        ),
                       ),
                     ),
                   ),

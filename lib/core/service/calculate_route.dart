@@ -1,35 +1,35 @@
-import 'dart:convert' show json;
+// import 'dart:convert' show json;
 
-import 'package:flutter/services.dart' show rootBundle;
-import 'package:turf/turf.dart' as turf;
-import 'package:latlong2/latlong.dart' show LatLng;
+// import 'package:flutter/services.dart' show rootBundle;
 
-Future<void> calculateRoute(LatLng from, LatLng to) async {
-  final geojsonString =
-      await rootBundle.loadString('assets/rutas/GeoJSON_rutas.geojson');
-  final geojsonData = json.decode(geojsonString);
-  final featureCollection = turf.FeatureCollection.fromJson(geojsonData);
+// import 'package:latlong2/latlong.dart' show LatLng;
 
-  turf.LineString? shortestRoute;
-  double shortestDistance = double.infinity;
+// Future<void> calculateRoute(LatLng from, LatLng to) async {
+//   final geojsonString =
+//       await rootBundle.loadString('assets/rutas/GeoJSON_rutas.geojson');
+//   final geojsonData = json.decode(geojsonString);
+//   final featureCollection = turf.FeatureCollection.fromJson(geojsonData);
 
-  for (var feature in featureCollection.features) {
-    if (feature.geometry is turf.LineString) {
-      var line = feature.geometry as turf.LineString;
-      // Usamos la función correcta de turf para calcular la distancia de la línea
-      var distance = turf.length(
-          turf.Feature<turf.LineString>(geometry: line), turf.Unit.meters);
+//   turf.LineString? shortestRoute;
+//   double shortestDistance = double.infinity;
 
-      if (distance < shortestDistance) {
-        shortestDistance = distance.toDouble();
-        shortestRoute = line;
-      }
-    }
-  }
+//   for (var feature in featureCollection.features) {
+//     if (feature.geometry is turf.LineString) {
+//       var line = feature.geometry as turf.LineString;
+//       // Usamos la función correcta de turf para calcular la distancia de la línea
+//       var distance = turf.length(
+//           turf.Feature<turf.LineString>(geometry: line), turf.Unit.meters);
 
-  if (shortestRoute!.coordinates.isNotEmpty) {
-    print("Ruta más corta encontrada: ${shortestRoute.coordinates}");
-  } else {
-    print("No se encontró una ruta válida");
-  }
-}
+//       if (distance < shortestDistance) {
+//         shortestDistance = distance.toDouble();
+//         shortestRoute = line;
+//       }
+//     }
+//   }
+
+//   if (shortestRoute!.coordinates.isNotEmpty) {
+//     print("Ruta más corta encontrada: ${shortestRoute.coordinates}");
+//   } else {
+//     print("No se encontró una ruta válida");
+//   }
+// }

@@ -102,10 +102,10 @@ class _MapaPageState extends State<MapaPage> {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          calculateRoute(
-            LatLng(-74.851285258320004, 11.02109875295),
-            LatLng(-74.851285300064646, 11.02109875300742),
-          );
+          // calculateRoute(
+          //   LatLng(-74.851285258320004, 11.02109875295),
+          //   LatLng(-74.851285300064646, 11.02109875300742),
+          // );
         },
         child: const Icon(Icons.search_outlined),
       ),

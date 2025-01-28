@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_mapa/ui/pages/acceso_gps_page.dart';
+import 'package:flutter_mapa/ui/pages/detail_route.dart';
 import 'package:flutter_mapa/ui/pages/home_page.dart';
 import 'package:flutter_mapa/ui/pages/loading_page.dart';
 import 'package:get/get.dart';
@@ -35,6 +36,7 @@ class MainApp extends StatelessWidget {
         'loading': (_) => const LoadingPage(),
         'acceso_gps': (_) => const AccesoGpsPage(),
         'mapa': (_) => HomePage(),
+        'detail': (_) => const DetailRoute(tag: 1,),
       },
       builder: (context, child) {
         return Theme(
