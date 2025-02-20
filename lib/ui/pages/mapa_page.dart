@@ -1,9 +1,5 @@
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_map/flutter_map.dart';
-import 'package:flutter_mapa/core/service/calculate_route.dart'
-    show calculateRoute;
 import 'package:flutter_mapa/ui/controllers/ubicacion_controller.dart';
 import 'package:flutter_mapa/ui/widgets/card_info_main.dart';
 import 'package:get/get.dart';
@@ -28,28 +24,6 @@ class _MapaPageState extends State<MapaPage> {
   @override
   Widget build(BuildContext context) {
     LocationController ubicacionController = Get.find();
-    // GraphController graphController = Get.find();
-
-    // Future<void> _loadPOIs(poi) async {
-    //   listOfPOIs.clear();
-    //   pointsOfPath.clear();
-    //   path.clear();
-    //   listOfPointsOfPath.clear();
-
-    //   listOfPOIs.add(LatLng(poi.latitude, poi.longitude));
-    //   listOfPointsOfPath = graphController.findShortestPath(
-    //       ubicacionController.ubicacion.value,
-    //       LatLng(poi.latitude, poi.longitude));
-    //   listOfPointsOfPath.forEach((element) {
-    //     pointsOfPath.add(LatLng(
-    //         element.coordinates.latitude, element.coordinates.longitude));
-    //   });
-
-    //   setState(() {
-    //     path = List<LatLng>.from(pointsOfPath);
-    //     markersList = List<LatLng>.from(listOfPOIs);
-    //   });
-    // }
 
     return Scaffold(
       appBar: AppBar(

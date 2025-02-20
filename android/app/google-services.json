@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "768340635943",
+    "project_id": "ecorutasun",
+    "storage_bucket": "ecorutasun.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:768340635943:android:8099d16c0e6d18bed37902",
+        "android_client_info": {
+          "package_name": "com.example.flutter_mapa"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAjCHD_NmtBSAyN-pfjIvzxz1CFzHtyCN0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
