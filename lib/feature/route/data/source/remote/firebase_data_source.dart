@@ -8,21 +8,17 @@ import 'package:flutter_mapa/feature/route/data/source/remote/i_remote_data_sour
 class FirebaseDataSource implements IRemoteDataSource {
   final FirebaseFirestore _firestore = FirebaseFirestore.instance;
 
-
   @override
   Future<Either<Failure, Unit>> joinRoute(
       String routeId, UserModel user) async {
     try {
       // Verificar si la ruta existe
-      final snapshot = await FirebaseFirestore.instance
-          .collection('rutas')
-          .doc(routeId)
-          .get();
+      final snapshot = await _firestore.collection('rutas').doc(routeId).get();
 
       if (snapshot.exists) {
         // Obtener los datos del usuario actual
 
-        await FirebaseFirestore.instance.collection('rutas').doc(routeId).set({
+        await _firestore.collection('rutas').doc(routeId).set({
           'participantes': {user.id: user.toMap()}
         }, SetOptions(merge: true));
         return Right(unit);
@@ -41,6 +37,19 @@ class FirebaseDataSource implements IRemoteDataSource {
       return Right(unit);
     } catch (e) {
       return Left(CreateFailure());
+    }
+  }
+
+  @override
+  Future<Either<Failure, Unit>> finishRoute(String routeId, String userId,
+      List<Map<String, dynamic>> positions) async {
+    try {
+      await _firestore.collection('rutas').doc(routeId).update({
+        'participantes.$userId.posiciones': positions,
+      });
+      return Right(unit);
+    } catch (e) {
+      return Left(FinishFailure());
     }
   }
 }

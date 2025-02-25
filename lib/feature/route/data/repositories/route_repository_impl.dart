@@ -27,4 +27,10 @@ class RouteRepositoryImpl implements IRouteRepository {
 
     return await _remoteDataSource.joinRoute(code, userModel);
   }
+
+  @override
+  Future<Either<Failure, Unit>> finishRoute(String routeId, String userId,
+      List<Map<String, dynamic>> positions) async {
+    return await _remoteDataSource.finishRoute(routeId, userId, positions);
+  }
 }

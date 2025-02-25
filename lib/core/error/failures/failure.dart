@@ -30,3 +30,7 @@ class CreateFailure extends Failure {
 class JoinFailure extends Failure {
   JoinFailure() : super('Join Failure');
 }
+
+class FinishFailure extends Failure {
+  FinishFailure() : super('Finish Failure');
+}

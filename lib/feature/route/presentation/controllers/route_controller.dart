@@ -1,28 +1,26 @@
 import 'dart:async';
 import 'dart:math';
 
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_mapa/core/route/app_router.dart';
 import 'package:flutter_mapa/core/services/natigation_service.dart';
+import 'package:flutter_mapa/feature/auth/domain/entities/user.dart';
+import 'package:flutter_mapa/feature/route/config/routes/routes_route.dart';
 import 'package:flutter_mapa/feature/route/domain/entity/route.dart';
 import 'package:flutter_mapa/feature/route/domain/use_cases/create_route_usecase.dart';
+import 'package:flutter_mapa/feature/route/domain/use_cases/finish_route_usecase.dart';
 import 'package:flutter_mapa/feature/route/domain/use_cases/join_route_usecase.dart';
-import 'package:flutter_mapa/ui/screens/unirse_a_ruta.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:get/get.dart';
 
 class RouteController extends GetxController {
-  //! TODO DESACOPLAR ESTE CONTROLADOR DE FIREBASE
-
-  final FirebaseFirestore _firestore = FirebaseFirestore.instance;
-
   final CreateRouteUsecase createRouteUsecase;
   final JoinRouteUsecase joinRouteUsecase;
+  final FinishRouteUsecase finishRouteUsecase;
 
   RouteController({
     required this.createRouteUsecase,
     required this.joinRouteUsecase,
+    required this.finishRouteUsecase,
   });
 
   final codigoController = TextEditingController();
@@ -46,20 +44,17 @@ class RouteController extends GetxController {
     codigoSala.value = codigo;
     final nuevaRuta = RouteEntity(id: codigo, codigo: codigo);
 
-    await _firestore.collection('rutas').doc(codigo).set(
-          nuevaRuta.toMap(),
-        );
-    await _firestore
-        .collection('rutas')
-        .doc(codigo)
-        .collection('participantes')
-        .add({});
-    ruta.value = nuevaRuta;
+    var result = await createRouteUsecase(nuevaRuta);
 
-    Get.snackbar('Éxito', 'Ruta creada correctamente');
-
-    // Get.toNamed(Routes.detailRoute,
-    //     parameters: {'codigo': codigo, 'esGuia': true.toString()});
+    result.fold((fail) => Get.snackbar("Ups algo falló", fail.message),
+        (result) {
+      ruta.value = nuevaRuta;
+      Get.snackbar('Éxito', 'Ruta creada correctamente');
+      NavigationServices.navigateWithPush(
+        RoutesRoute.WAITING_ROOM,
+        queryParams: {'codeRoom': codigo},
+      );
+    });
   }
 
   String generarCodigoAleatorio() {
@@ -69,7 +64,7 @@ class RouteController extends GetxController {
   }
 
   Future<void> unirseARuta({
-    required Usuario user,
+    required UserEntity user,
   }) async {
     final codigoRuta = codigoController.text.trim();
     if (codigoRuta.isEmpty) {
@@ -79,30 +74,7 @@ class RouteController extends GetxController {
 
     try {
       // Verificar si la ruta existe
-      final snapshot = await FirebaseFirestore.instance
-          .collection('rutas')
-          .doc(codigoRuta)
-          .get();
-
-      if (snapshot.exists) {
-        // Obtener los datos del usuario actual
-
-        await FirebaseFirestore.instance
-            .collection('rutas')
-            .doc(codigoRuta)
-            .set({
-          'participantes': {user.id: user.toMap()}
-        }, SetOptions(merge: true));
-
-        // Verificar si el usuario es el guía
-        final esGuia = true; // await esGuia(codigoRuta);
-
-        // Navegar a la pantalla de la ruta
-        // NavigationServices.navigateWithPush(Routes.detailRoute,
-        //     queryParams: {'codigo': codigoRuta, 'esGuia': esGuia.toString()});
-      } else {
-        Get.snackbar('Error', 'Ruta no encontrada');
-      }
+      await joinRouteUsecase(codigoRuta, user);
     } catch (e) {
       Get.snackbar('Error', 'Ocurrió un error al unirse a la ruta: $e');
     }
@@ -119,9 +91,7 @@ class RouteController extends GetxController {
   Future<void> finalizarRuta(
       {required String rutaId, required String visitanteId}) async {
     // Enviar datos a Firestore
-    await _firestore.collection('rutas').doc(rutaId).update({
-      'participantes.$visitanteId.posiciones': posiciones,
-    });
+    await finishRouteUsecase(rutaId, visitanteId, posiciones);
 
     detenerCapturaDePosicion();
 

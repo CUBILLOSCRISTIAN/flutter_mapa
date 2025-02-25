@@ -10,4 +10,5 @@ abstract class Routes {
   static const REGISTER = '/register';
 
   static const HOME_PAGE = '/home-page';
+  static const WAITING_ROOM = '/waiting-room';
 }

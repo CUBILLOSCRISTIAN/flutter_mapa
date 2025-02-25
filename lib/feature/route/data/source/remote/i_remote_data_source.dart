@@ -7,4 +7,7 @@ abstract interface class IRemoteDataSource {
   Future<Either<Failure, Unit>> joinRoute(String routeId, UserModel user);
 
   Future<Either<Failure, Unit>> createRoute(RouteModel model);
+
+  Future<Either<Failure, Unit>> finishRoute(
+      String routeId, String userId, List<Map<String, dynamic>> positions);
 }

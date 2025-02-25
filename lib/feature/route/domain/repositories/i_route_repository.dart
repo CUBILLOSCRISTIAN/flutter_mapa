@@ -6,4 +6,5 @@ import 'package:flutter_mapa/feature/route/domain/entity/route.dart';
 abstract interface class IRouteRepository {
   Future<Either<Failure, Unit>> joinRoute(String code, UserEntity user);
   Future<Either<Failure, Unit>> createRoute(RouteEntity entity);
+  Future<Either<Failure, Unit>> finishRoute(String routeId, String userId, List<Map<String, dynamic>> positions);
 }

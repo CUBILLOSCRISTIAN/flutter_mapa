@@ -13,9 +13,10 @@ class HomePage extends GetView<AuthController> {
   @override
   Widget build(BuildContext context) {
     var colorTheme = Theme.of(context).colorScheme;
+
     return Scaffold(
       backgroundColor: colorTheme.surfaceContainer,
-      appBar: CustomAppBar(),
+      appBar: CustomAppBar(controller),
       body: Column(
         children: [
           SearchBar(),
@@ -24,10 +25,12 @@ class HomePage extends GetView<AuthController> {
         ],
       ),
       bottomNavigationBar: CustomBottomNavigationBar(),
-      floatingActionButton: (controller.user?.role == UserRole.admin ||
-              controller.user?.role == UserRole.guide)
-          ? _buildFloatingActionButtonGuide(rutaController)
-          : _buildFloatingActionButtonParticipant(rutaController),
+      floatingActionButton: Obx(
+        () => (controller.user?.role == UserRole.admin ||
+                controller.user?.role == UserRole.guide)
+            ? _buildFloatingActionButtonGuide(rutaController)
+            : _buildFloatingActionButtonParticipant(rutaController),
+      ),
     );
   }
 
@@ -112,9 +115,12 @@ class HomePage extends GetView<AuthController> {
 }
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
-  const CustomAppBar({
+  const CustomAppBar(
+    this.controller, {
     super.key,
   });
+
+  final AuthController controller;
 
   @override
   Widget build(BuildContext context) {
@@ -140,7 +146,9 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
               ),
             ],
           ),
-          IconButton(onPressed: () {}, icon: Icon(Icons.exit_to_app_rounded))
+          IconButton(
+              onPressed: () => controller.signOut(),
+              icon: Icon(Icons.exit_to_app_rounded))
         ],
       ),
     );

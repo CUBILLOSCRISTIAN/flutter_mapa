@@ -6,29 +6,29 @@ import 'package:flutter_mapa/feature/auth/presentation/controllers/auth_controll
 import 'package:flutter_mapa/feature/route/presentation/controllers/route_controller.dart';
 import 'package:get/get.dart';
 
-class RutaScreen extends StatelessWidget {
-  final String codigoRuta = Get.parameters['codigo'] as String;
+class WaitingRoomScreen extends StatelessWidget {
+  final String codeRoom;
   final bool esGuia = true;
 
-  RutaScreen({super.key});
+  WaitingRoomScreen({super.key, required this.codeRoom});
 
   final RouteController rutaController = Get.find();
 
   @override
   Widget build(BuildContext context) {
-    print('Código de la ruta: $codigoRuta');
+    print('Código de la ruta: $codeRoom');
 
     print('Es guía: $esGuia');
 
     return Scaffold(
       appBar: AppBar(
-        title: Text('Ruta: $codigoRuta'),
+        title: Text('Ruta: $codeRoom'),
       ),
       body: Column(
         children: [
           Expanded(
             child: ParticipantesList(
-                codigoRuta: codigoRuta), // Lista de participantes
+                codigoRuta: codeRoom), // Lista de participantes
           ),
           if (esGuia) // Mostrar botón solo si es el guía
             ...[
@@ -37,7 +37,7 @@ class RutaScreen extends StatelessWidget {
               child: ElevatedButton(
                 onPressed: () {
                   // Lógica para comenzar la ruta
-                  comenzarRuta(codigoRuta);
+                  comenzarRuta(codeRoom);
                 },
                 child: Text('Comenzar Ruta'),
               ),

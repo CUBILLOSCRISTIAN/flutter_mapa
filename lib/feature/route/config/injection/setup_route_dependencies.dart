@@ -3,6 +3,7 @@ import 'package:flutter_mapa/feature/route/data/source/remote/firebase_data_sour
 import 'package:flutter_mapa/feature/route/data/source/remote/i_remote_data_source.dart';
 import 'package:flutter_mapa/feature/route/domain/repositories/i_route_repository.dart';
 import 'package:flutter_mapa/feature/route/domain/use_cases/create_route_usecase.dart';
+import 'package:flutter_mapa/feature/route/domain/use_cases/finish_route_usecase.dart';
 import 'package:flutter_mapa/feature/route/domain/use_cases/join_route_usecase.dart';
 import 'package:flutter_mapa/feature/route/presentation/controllers/route_controller.dart';
 import 'package:get/get.dart';
@@ -34,11 +35,19 @@ void setupRouteDependencies() {
     ),
   );
 
+  // Caso de uso para finalizar rutas
+  Get.lazyPut<FinishRouteUsecase>(
+    () => FinishRouteUsecase(
+      Get.find<IRouteRepository>(),
+    ),
+  );
+
   // Controlador de rutas
   Get.lazyPut<RouteController>(
     () => RouteController(
       createRouteUsecase: Get.find<CreateRouteUsecase>(),
       joinRouteUsecase: Get.find<JoinRouteUsecase>(),
+      finishRouteUsecase: Get.find<FinishRouteUsecase>(),
     ),
   );
 }
